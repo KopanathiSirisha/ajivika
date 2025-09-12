@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajivika Placement Cell - Aditya University</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            background: #0f0f23;
+            color: #e4e4e7;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            border: 1px solid #374151;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #f59e0b, #ef4444);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        h1 {
+            color: #f8fafc;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        /* Success Stories Section */
+        .success-stories {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            color: #f1f5f9;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border: 1px solid #374151;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #f59e0b;
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            display: block;
+            color: #f59e0b;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .achievement-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .achievement-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid #f59e0b;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-left-color: #ef4444;
+            transform: translateX(5px);
+        }
+
+        .achievement-card h3 {
+            color: #f1f5f9;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .achievement-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Login Section */
+        .login-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .login-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .login-card:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.1);
+        }
+
+        .login-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(45deg, #f59e0b, #ef4444);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: white;
+            font-size: 2.2rem;
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .login-card h3 {
+            color: #f1f5f9;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .login-card p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #f1f5f9;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 15px;
+            background: #0f172a;
+            border: 2px solid #374151;
+            border-radius: 12px;
+            color: #f1f5f9;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Dashboard Styles */
+        .dashboard {
+            display: none;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        .dashboard-header {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .dashboard-header h2 {
+            color: #f1f5f9;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            background: #0f172a;
+            padding: 8px;
+            border-radius: 15px;
+            border: 1px solid #374151;
+        }
+
+        .nav-tab {
+            padding: 12px 24px;
+            background: transparent;
+            color: #94a3b8;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-tab:hover {
+            color: #f1f5f9;
+            background: #1e293b;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content h3 {
+            color: #f1f5f9;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .job-card, .student-card {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .job-card:hover, .student-card:hover {
+            border-left-color: #ef4444;
+            transform: translateY(-2px);
+        }
+
+        .job-card h4, .student-card h4 {
+            color: #f1f5f9;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .job-card p, .student-card p {
+            color: #cbd5e1;
+            margin-bottom: 10px;
+        }
+
+        .job-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            width: auto;
+            min-width: 120px;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.4);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: #1e293b;
+            border: 1px solid #334155;
+            margin: 3% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 85vh;
+            overflow-y: auto;
+            color: #f1f5f9;
+        }
+
+        .close {
+            color: #94a3b8;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #f59e0b;
+        }
+
+        .modal h3 {
+            color: #f1f5f9;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hr-questions {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .question-item {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #f59e0b;
+            transition: all 0.3s ease;
+        }
+
+        .question-item:hover {
+            border-left-color: #ef4444;
+        }
+
+        .question-item strong {
+            color: #f59e0b;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .profile-card {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .profile-card h4 {
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 4px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .notification {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            padding: 18px 25px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 500;
+            z-index: 1001;
+            display: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .notification.success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .notification.error {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .test-section {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .test-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .test-question {
+            color: #f1f5f9;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .test-options {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .test-option {
+            background: #0f172a;
+            border: 1px solid #374151;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #cbd5e1;
+        }
+
+        .test-option:hover {
+            border-color: #f59e0b;
+            background: #1e293b;
+        }
+
+        .test-option.selected {
+            border-color: #f59e0b;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+            color: #f59e0b;
+        }
+
+        .test-progress {
+            background: #0f172a;
+            height: 8px;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .test-progress-bar {
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .login-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs {
+                flex-direction: column;
+            }
+            
+            .job-actions {
+                flex-direction: column;
+            }
+            
+            .dashboard-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">A</div>
+                <div>
+                    <h1>Ajivika Placement Cell</h1>
+                    <p class="subtitle">Aditya University - Connecting Talent with Opportunity</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Page -->
+        <div id="homePage">
+            <!-- Success Stories -->
+            <div class="success-stories">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> Our Success Stories</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">107</span>
+                        <span class="stat-label">Students Placed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">₹2.60</span>
+                        <span class="stat-label">LPA Average Package</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">₹31.31</span>
+                        <span class="stat-label">LPA Highest Package</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Partner Companies</span>
+                    </div>
+                </div>
+
+                <div class="achievement-cards">
+                    <div class="achievement-card">
+                        <h3><i class="fas fa-award"></i> KYB Placement Success</h3>
+                        <p>107 students successfully placed in KYB with an average package of ₹2.60 LPA, showcasing our commitment to excellence in placement.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h3><i class="fas fa-star"></i> Amazon Achievement</h3>
+                        <p>Tevitt Sai Maji (22A19A4440) secured the highest package of ₹31.31 LPA at Amazon, setting a new benchmark for our students.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <h3><i class="fas fa-chart-line"></i> Consistent Growth</h3>
+                        <p>Year-over-year improvement in placement statistics with increasing participation from top-tier companies across various sectors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Section -->
+            <div class="login-section">
+                <!-- Admin Login -->
+                <div class="login-card">
+                    <div class="login-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Admin Portal</h3>
+                    <p>Access comprehensive placement management tools and student analytics.</p>
+                    
+                    <div class="form-group">
+                        <label for="adminUsername">Username</label>
+                        <input type="text" id="adminUsername" placeholder="Enter admin username">
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" placeholder="Enter admin password">
+                    </div>
+                    <button class="btn" onclick="adminLogin()">Access Admin Portal</button>
+                </div>
+
+                <!-- Student Login -->
+                <div class="login-card">
+                    <div class="login-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Student Portal</h3>
+                    <p>Your gateway to placement opportunities, tests, and career resources.</p>
+                    
+                    <div class="form-group">
+                        <label for="studentRollNo">Roll Number</label>
+                        <input type="text" id="studentRollNo" placeholder="Enter your roll number">
+                    </div>
+                    <div class="form-group">
+                        <label for="studentPassword">Password</label>
+                        <input type="password" id="studentPassword" placeholder="Enter password">
+                    </div>
+                    <button class="btn btn-secondary" onclick="studentLogin()">Access Student Portal</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div id="adminDashboard" class="dashboard">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
+                <button class="btn btn-small" onclick="logout()">Logout</button>
+            </div>
+
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showTab('admin-jobs', this)">Job Management</button>
+                <button class="nav-tab" onclick="showTab('admin-students', this)">Student Management</button>
+                <button class="nav-tab" onclick="showTab('admin-groups', this)">WhatsApp Groups</button>
+                <button class="nav-tab" onclick="showTab('admin-notifications', this)">Send Notifications</button>
+                <button class="nav-tab" onclick="showTab('admin-stats', this)">Statistics</button>
+            </div>
+
+            <!-- Job Management Tab -->
+            <div id="admin-jobs" class="tab-content active">
+                <div class="test-header">
+                    <h3>Job Postings Management</h3>
+                    <button class="btn btn-small" onclick="showModal('postJobModal')">Post New Job</button>
+                </div>
+                <div id="jobsList"></div>
+            </div>
+
+            <!-- Student Management Tab -->
+            <div id="admin-students" class="tab-content">
+                <h3>Student Management</h3>
+                <div id="studentsList"></div>
+            </div>
+
+            <!-- WhatsApp Groups Tab -->
+            <div id="admin-groups" class="tab-content">
+                <div class="test-header">
+                    <h3>WhatsApp Groups Management</h3>
+                    <button class="btn btn-small" onclick="showModal('addGroupModal')">Add New Group</button>
+                </div>
+                <div id="groupsList"></div>
+            </div>
+
+            <!-- Notifications Tab -->
+            <div id="admin-notifications" class="tab-content">
+                <h3>Send Email Notifications</h3>
+                <div class="form-group">
+                    <label for="emailSubject">Subject</label>
+                    <input type="text" id="emailSubject" placeholder="Enter email subject">
+                </div>
+                <div class="form-group">
+                    <label for="emailMessage">Message</label>
+                    <textarea id="emailMessage" rows="6" placeholder="Enter your message to students"></textarea>
+                </div>
+                <button class="btn" onclick="sendNotification()">Send to All Students</button>
+            </div>
+
+            <!-- Statistics Tab -->
+            <div id="admin-stats" class="tab-content">
+                <h3>Placement Statistics Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number" id="totalStudents">5</span>
+                        <span class="stat-label">Total Students</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="appliedStudents">0</span>
+                        <span class="stat-label">Applied Students</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="notAppliedStudents">5</span>
+                        <span class="stat-label">Not Applied</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="totalJobs">0</span>
+                        <span class="stat-label">Active Jobs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Dashboard -->
+        <div id="studentDashboard" class="dashboard">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-user-graduate"></i> Student Dashboard</h2>
+                <button class="btn btn-small" onclick="logout()">Logout</button>
+            </div>
+
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showTab('student-jobs', this)">Job Opportunities</button>
+                <button class="nav-tab" onclick="showTab('student-groups', this)">WhatsApp Groups</button>
+                <button class="nav-tab" onclick="showTab('student-tests', this)">Practice Tests</button>
+                <button class="nav-tab" onclick="showTab('student-hr', this)">HR Questions</button>
+                <button class="nav-tab" onclick="showTab('student-profile', this)">My Profile</button>
+            </div>
+
+            <!-- Available Jobs Tab -->
+            <div id="student-jobs" class="tab-content active">
+                <h3>Available Job Opportunities</h3>
+                <div id="studentJobsList"></div>
+            </div>
+
+            <!-- WhatsApp Groups Tab -->
+            <div id="student-groups" class="tab-content">
+                <h3>WhatsApp Groups</h3>
+                <div id="studentGroupsList"></div>
+            </div>
+
+            <!-- Tests Tab -->
+            <div id="student-tests" class="tab-content">
+                <h3>Practice Tests & Assessments</h3>
+                <div class="test-section">
+                    <div class="test-header">
+                        <h4>Available Tests</h4>
+                        <button class="btn btn-small" onclick="startTest('aptitude')">Start Aptitude Test</button>
+                    </div>
+                    <div id="testArea"></div>
+                    <div id="testScoresList"></div>
+                </div>
+            </div>
+
+            <!-- HR Questions Tab -->
+            <div id="student-hr" class="tab-content">
+                <h3>HR Interview Questions Bank</h3>
+                <div class="hr-questions" id="hrQuestionsList"></div>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="student-profile" class="tab-content">
+                <h3>My Profile</h3>
+                <div class="profile-section">
+                    <div class="profile-card">
+                        <h4>Personal Information</h4>
+                        <div class="form-group">
+                            <label>Roll Number</label>
+                            <input type="text" id="profileRollNo" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" id="profileName">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="profileEmail">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" id="profilePhone">
+                        </div>
+                        <button class="btn" onclick="updateProfile()">Update Profile</button>
+                    </div>
+
+                    <div class="profile-card">
+                        <h4>Skills & Projects</h4>
+                        <div class="form-group">
+                            <label>Skills</label>
+                            <input type="text" id="profileSkills" placeholder="e.g., Java, Python, React">
+                            <small style="color: #94a3b8;">Separate skills with commas</small>
+                        </div>
+                        <div id="skillsDisplay" style="margin: 15px 0;"></div>
+                        <div class="form-group">
+                            <label>Project Links</label>
+                            <textarea id="profileProjects" rows="4" placeholder="Enter your project links (one per line)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Resume Link</label>
+                            <input type="text" id="profileResume" placeholder="Google Drive or other resume link">
+                        </div>
+                        <button class="btn" onclick="updateSkillsProjects()">Update Skills & Projects</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Post Job Modal -->
+    <div id="postJobModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('postJobModal')">&times;</span>
+            <h3>Post New Job Opportunity</h3>
+            <div class="form-group">
+                <label for="jobCompany">Company Name *</label>
+                <input type="text" id="jobCompany" placeholder="Enter company name" required>
+            </div>
+            <div class="form-group">
+                <label for="jobTitle">Job Title *</label>
+                <input type="text" id="jobTitle" placeholder="Enter job title" required>
+            </div>
+            <div class="form-group">
+                <label for="jobDescription">Job Description *</label>
+                <textarea id="jobDescription" rows="4" placeholder="Enter detailed job description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="jobStartDate">Application Start Date *</label>
+                <input type="date" id="jobStartDate" required>
+            </div>
+            <div class="form-group">
+                <label for="jobEndDate">Application End Date *</label>
+                <input type="date" id="jobEndDate" required>
+            </div>
+            <div class="form-group">
+                <label for="jobLink">Application Link *</label>
+                <input type="text" id="jobLink" placeholder="Enter application/company link" required>
+            </div>
+            <button class="btn" onclick="postJob()">Post Job Opportunity</button>
+        </div>
+    </div>
+
+    <!-- Add Group Modal -->
+    <div id="addGroupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal('addGroupModal')">&times;</span>
+            <h3>Add WhatsApp Group</h3>
+            <div class="form-group">
+                <label for="groupName">Group Name *</label>
+                <input type="text" id="groupName" placeholder="Enter group name" required>
+            </div>
+            <div class="form-group">
+                <label for="groupLink">WhatsApp Link *</label>
+                <input type="text" id="groupLink" placeholder="Enter WhatsApp group invite link" required>
+            </div>
+            <div class="form-group">
+                <label for="groupDescription">Description</label>
+                <textarea id="groupDescription" rows="3" placeholder="Enter group description (optional)"></textarea>
+            </div>
+            <button class="btn" onclick="addGroup()">Add Group</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        // Sample data
+        const students = [
+            { rollNo: '23A95A4404', name: 'Student 1', email: 'student1@aditya.ac.in', phone: '9876543210', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
+            { rollNo: '22A19A4440', name: 'Tevitt Sai Maji', email: 'tevitt@aditya.ac.in', phone: '9876543211', skills: ['Java', 'Python', 'DSA'], projects: 'https://github.com/tevitt/project1', resume: '', appliedJobs: [], testScores: [] },
+            { rollNo: '23A95A4406', name: 'Student 3', email: 'student3@aditya.ac.in', phone: '9876543212', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
+            { rollNo: '23A95A4405', name: 'Student 4', email: 'student4@aditya.ac.in', phone: '9876543213', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
+            { rollNo: '23A95A4401', name: 'Student 5', email: 'student5@aditya.ac.in', phone: '9876543214', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] }
+        ];
+
+        let jobs = [];
+        let groups = [];
+        let currentUser = null;
+
+        const hrQuestions = [
+            { company: 'Amazon', question: 'Tell me about yourself and why you want to work at Amazon.' },
+            { company: 'Amazon', question: 'Describe a time when you had to work under pressure and how you handled it.' },
+            { company: 'Amazon', question: 'How do you handle disagreements with team members?' },
+            { company: 'Google', question: 'What motivates you in your work and career?' },
+            { company: 'Google', question: 'Describe your biggest professional achievement so far.' },
+            { company: 'Microsoft', question: 'How do you prioritize tasks when everything seems urgent?' },
+            { company: 'Microsoft', question: 'Tell me about a time you failed and what you learned from it.' },
+            { company: 'TCS', question: 'Why do you want to join our company specifically?' },
+            { company: 'TCS', question: 'Where do you see yourself in 5 years?' },
+            { company: 'Infosys', question: 'What are your greatest strengths and weaknesses?' },
+            { company: 'Wipro', question: 'How do you handle stress and pressure in the workplace?' },
+            { company: 'Accenture', question: 'Describe a challenging project you worked on and how you overcame obstacles.' }
+        ];
+
+        const aptitudeQuestions = [
+            {
+                question: "If a train travels 60 km in 45 minutes, what is its speed in km/h?",
+                options: ["70 km/h", "75 km/h", "80 km/h", "85 km/h"],
+                correct: 2
+            },
+            {
+                question: "What comes next in the series: 2, 6, 12, 20, 30, ?",
+                options: ["40", "42", "44", "46"],
+                correct: 1
+            },
+            {
+                question: "If 5 workers can complete a task in 12 days, how many days will it take 3 workers to complete the same task?",
+                options: ["18 days", "20 days", "22 days", "24 days"],
+                correct: 1
+            },
+            {
+                question: "What is 15% of 240?",
+                options: ["32", "36", "40", "44"],
+                correct: 1
+            },
+            {
+                question: "If A:B = 3:4 and B:C = 5:6, then A:C = ?",
+                options: ["5:8", "15:24", "3:6", "1:2"],
+                correct: 0
+            }
+        ];
+
+        let currentTest = null;
+        let currentQuestionIndex = 0;
+        let testAnswers = [];
+
+        // Authentication functions
+        function adminLogin() {
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+
+            if (!username || !password) {
+                showNotification('Please enter both username and password!', 'error');
+                return;
+            }
+
+            if (username === 'admin' && password === 'admin123') {
+                currentUser = { type: 'admin', username: 'admin' };
+                showDashboard('admin');
+                showNotification('Welcome to Admin Portal!', 'success');
+            } else {
+                showNotification('Invalid admin credentials!', 'error');
+            }
+        }
+
+        function studentLogin() {
+            const rollNo = document.getElementById('studentRollNo').value.trim();
+            const password = document.getElementById('studentPassword').value.trim();
+
+            if (!rollNo || !password) {
+                showNotification('Please enter both roll number and password!', 'error');
+                return;
+            }
+
+            const student = students.find(s => s.rollNo === rollNo);
+            if (student && password === rollNo) {
+                currentUser = { type: 'student', rollNo: rollNo, data: student };
+                showDashboard('student');
+                loadStudentProfile();
+                showNotification('Welcome to Student Portal!', 'success');
+            } else {
+                showNotification('Invalid student credentials!', 'error');
+            }
+        }
+
+        function logout() {
+            currentUser = null;
+            document.getElementById('homePage').style.display = 'block';
+            document.getElementById('adminDashboard').style.display = 'none';
+            document.getElementById('studentDashboard').style.display = 'none';
+            clearInputs();
+            showNotification('Logged out successfully!', 'success');
+        }
+
+        function clearInputs() {
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+            document.getElementById('studentRollNo').value = '';
+            document.getElementById('studentPassword').value = '';
+        }
+
+        // Dashboard functions
+        function showDashboard(type) {
+            document.getElementById('homePage').style.display = 'none';
+            if (type === 'admin') {
+                document.getElementById('adminDashboard').style.display = 'block';
+                document.getElementById('studentDashboard').style.display = 'none';
+                loadAdminData();
+            } else {
+                document.getElementById('studentDashboard').style.display = 'block';
+                document.getElementById('adminDashboard').style.display = 'none';
+                loadStudentData();
+            }
+        }
+
+        function showTab(tabId, element) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from all nav tabs
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add active class to clicked nav tab
+            if (element) {
+                element.classList.add('active');
+            }
+        }
+
+        // Modal functions
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function hideModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            clearModalInputs();
+        }
+
+        function clearModalInputs() {
+            const inputs = document.querySelectorAll('.modal input, .modal textarea, .modal select');
+            inputs.forEach(input => input.value = '');
+        }
+
+        // Notification function
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 4000);
+        }
+
+        // Admin functions
+        function loadAdminData() {
+            loadJobsList();
+            loadStudentsList();
+            loadGroupsList();
+            updateStatistics();
+        }
+
+        function postJob() {
+            const company = document.getElementById('jobCompany').value.trim();
+            const title = document.getElementById('jobTitle').value.trim();
+            const description = document.getElementById('jobDescription').value.trim();
+            const startDate = document.getElementById('jobStartDate').value;
+            const endDate = document.getElementById('jobEndDate').value;
+            const link = document.getElementById('jobLink').value.trim();
+
+            // Validate all required fields
+            if (!company) {
+                showNotification('Company name is required!', 'error');
+                return;
+            }
+            if (!title) {
+                showNotification('Job title is required!', 'error');
+                return;
+            }
+            if (!description) {
+                showNotification('Job description is required!', 'error');
+                return;
+            }
+            if (!startDate) {
+                showNotification('Application start date is required!', 'error');
+                return;
+            }
+            if (!endDate) {
+                showNotification('Application end date is required!', 'error');
+                return;
+            }
+            if (!link) {
+                showNotification('Application link is required!', 'error');
+                return;
+            }
+
+            // Validate dates
+            if (new Date(startDate) >= new Date(endDate)) {
+                showNotification('End date must be after start date!', 'error');
+                return;
+            }
+
+            const job = {
+                id: Date.now(),
+                company,
+                title,
+                description,
+                startDate,
+                endDate,
+                link,
+                applicants: []
+            };
+
+            jobs.push(job);
+            hideModal('postJobModal');
+            loadJobsList();
+            updateStatistics();
+            showNotification('Job posted successfully!', 'success');
+        }
+
+        function loadJobsList() {
+            const jobsList = document.getElementById('jobsList');
+            const studentJobsList = document.getElementById('studentJobsList');
+            
+            if (jobs.length === 0) {
+                jobsList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-briefcase"></i>
+                        <p>No jobs posted yet. Click "Post New Job" to get started.</p>
+                    </div>
+                `;
+                if (studentJobsList) {
+                    studentJobsList.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-search"></i>
+                            <p>No job opportunities available at the moment. Check back soon!</p>
+                        </div>
+                    `;
+                }
+                return;
+            }
+
+            const jobsHTML = jobs.map(job => `
+                <div class="job-card">
+                    <h4>${job.company} - ${job.title}</h4>
+                    <p style="margin-bottom: 15px;">${job.description}</p>
+                    <p><strong>Application Period:</strong> ${formatDate(job.startDate)} to ${formatDate(job.endDate)}</p>
+                    <p><strong>Total Applicants:</strong> ${job.applicants.length} students</p>
+                    <div class="job-actions">
+                        <a href="${job.link}" target="_blank" class="btn btn-small">View Application Link</a>
+                        <button class="btn btn-small btn-danger" onclick="deleteJob(${job.id})">Delete Job</button>
+                    </div>
+                </div>
+            `).join('');
+
+            jobsList.innerHTML = jobsHTML;
+
+            // Load for students
+            if (studentJobsList) {
+                const activeJobs = jobs.filter(job => new Date(job.endDate) >= new Date());
+                if (activeJobs.length === 0) {
+                    studentJobsList.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-clock"></i>
+                            <p>No active job openings right now. New opportunities will appear here.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const studentJobsHTML = activeJobs.map(job => {
+                    const applied = currentUser && job.applicants.includes(currentUser.rollNo);
+                    const isExpired = new Date(job.endDate) < new Date();
+                    
+                    return `
+                        <div class="job-card">
+                            <h4>${job.company} - ${job.title}</h4>
+                            <p style="margin-bottom: 15px;">${job.description}</p>
+                            <p><strong>Application Deadline:</strong> ${formatDate(job.endDate)}</p>
+                            <p><strong>Status:</strong> ${isExpired ? '<span style="color: #ef4444;">Expired</span>' : '<span style="color: #10b981;">Active</span>'}</p>
+                            <div class="job-actions">
+                                <a href="${job.link}" target="_blank" class="btn btn-small">Apply Now</a>
+                                ${!applied && !isExpired ? 
+                                    `<button class="btn btn-small btn-secondary" onclick="applyJob(${job.id})">Mark as Applied</button>` :
+                                    applied ? `<span class="skill-tag">Applied ✓</span>` : ''
+                                }
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                studentJobsList.innerHTML = studentJobsHTML;
+            }
+        }
+
+        function deleteJob(jobId) {
+            if (confirm('Are you sure you want to delete this job posting?')) {
+                jobs = jobs.filter(job => job.id !== jobId);
+                loadJobsList();
+                updateStatistics();
+                showNotification('Job posting deleted successfully!', 'success');
+            }
+        }
+
+        function loadStudentsList() {
+            const studentsList = document.getElementById('studentsList');
+            const studentsHTML = students.map(student => `
+                <div class="student-card">
+                    <h4>${student.name} (${student.rollNo})</h4>
+                    <p><strong>Email:</strong> ${student.email}</p>
+                    <p><strong>Phone:</strong> ${student.phone}</p>
+                    <p><strong>Skills:</strong> ${student.skills.length > 0 ? student.skills.join(', ') : 'Not specified'}</p>
+                    <p><strong>Applied Jobs:</strong> ${student.appliedJobs.length} applications</p>
+                    <p><strong>Test Scores:</strong> ${student.testScores.length} tests completed</p>
+                    <div class="job-actions">
+                        ${student.resume ? 
+                            `<a href="${student.resume}" target="_blank" class="btn btn-small">View Resume</a>` :
+                            '<span style="color: #64748b; font-style: italic;">No resume uploaded</span>'
+                        }
+                    </div>
+                </div>
+            `).join('');
+            studentsList.innerHTML = studentsHTML;
+        }
+
+        function addGroup() {
+            const name = document.getElementById('groupName').value.trim();
+            const link = document.getElementById('groupLink').value.trim();
+            const description = document.getElementById('groupDescription').value.trim();
+
+            if (!name || !link) {
+                showNotification('Group name and WhatsApp link are required!', 'error');
+                return;
+            }
+
+            const group = {
+                id: Date.now(),
+                name,
+                link,
+                description: description || 'No description provided'
+            };
+
+            groups.push(group);
+            hideModal('addGroupModal');
+            loadGroupsList();
+            showNotification('WhatsApp group added successfully!', 'success');
+        }
+
+        function loadGroupsList() {
+            const groupsList = document.getElementById('groupsList');
+            const studentGroupsList = document.getElementById('studentGroupsList');
+            
+            if (groups.length === 0) {
+                const emptyMessage = `
+                    <div class="empty-state">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>No WhatsApp groups added yet.</p>
+                    </div>
+                `;
+                groupsList.innerHTML = emptyMessage;
+                if (studentGroupsList) studentGroupsList.innerHTML = emptyMessage;
+                return;
+            }
+
+            const groupsHTML = groups.map(group => `
+                <div class="job-card">
+                    <h4><i class="fab fa-whatsapp" style="color: #25d366;"></i> ${group.name}</h4>
+                    <p>${group.description}</p>
+                    <div class="job-actions">
+                        <a href="${group.link}" target="_blank" class="btn btn-small">Join Group</a>
+                        <button class="btn btn-small btn-danger" onclick="deleteGroup(${group.id})">Delete Group</button>
+                    </div>
+                </div>
+            `).join('');
+
+            groupsList.innerHTML = groupsHTML;
+            
+            if (studentGroupsList) {
+                const studentGroupsHTML = groups.map(group => `
+                    <div class="job-card">
+                        <h4><i class="fab fa-whatsapp" style="color: #25d366;"></i> ${group.name}</h4>
+                        <p>${group.description}</p>
+                        <div class="job-actions">
+                            <a href="${group.link}" target="_blank" class="btn btn-small">Join Group</a>
+                        </div>
+                    </div>
+                `).join('');
+                studentGroupsList.innerHTML = studentGroupsHTML;
+            }
+        }
+
+        function deleteGroup(groupId) {
+            if (confirm('Are you sure you want to delete this WhatsApp group?')) {
+                groups = groups.filter(group => group.id !== groupId);
+                loadGroupsList();
+                showNotification('WhatsApp group deleted successfully!', 'success');
+            }
+        }
+
+        function sendNotification() {
+            const subject = document.getElementById('emailSubject').value.trim();
+            const message = document.getElementById('emailMessage').value.trim();
+
+            if (!subject || !message) {
+                showNotification('Please fill in both subject and message!', 'error');
+                return;
+            }
+
+            // Simulate sending email
+            showNotification(`Email notification sent to all ${students.length} students successfully!`, 'success');
+            document.getElementById('emailSubject').value = '';
+            document.getElementById('emailMessage').value = '';
+        }
+
+        function updateStatistics() {
+            const totalStudents = students.length;
+            const appliedStudents = students.filter(s => s.appliedJobs.length > 0).length;
+            const notAppliedStudents = totalStudents - appliedStudents;
+            const totalJobs = jobs.filter(job => new Date(job.endDate) >= new Date()).length;
+
+            document.getElementById('totalStudents').textContent = totalStudents;
+            document.getElementById('appliedStudents').textContent = appliedStudents;
+            document.getElementById('notAppliedStudents').textContent = notAppliedStudents;
+            document.getElementById('totalJobs').textContent = totalJobs;
+        }
+
+        // Student functions
+        function loadStudentData() {
+            loadJobsList();
+            loadGroupsList();
+            loadHRQuestions();
+            loadTestScores();
+        }
+
+        function loadStudentProfile() {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const student = currentUser.data;
+            document.getElementById('profileRollNo').value = student.rollNo;
+            document.getElementById('profileName').value = student.name;
+            document.getElementById('profileEmail').value = student.email;
+            document.getElementById('profilePhone').value = student.phone;
+            document.getElementById('profileSkills').value = student.skills.join(', ');
+            document.getElementById('profileProjects').value = student.projects;
+            document.getElementById('profileResume').value = student.resume;
+            
+            updateSkillsDisplay();
+        }
+
+        function updateProfile() {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+
+            const name = document.getElementById('profileName').value.trim();
+            const email = document.getElementById('profileEmail').value.trim();
+            const phone = document.getElementById('profilePhone').value.trim();
+
+            if (!name || !email || !phone) {
+                showNotification('Please fill all required fields!', 'error');
+                return;
+            }
+
+            students[studentIndex].name = name;
+            students[studentIndex].email = email;
+            students[studentIndex].phone = phone;
+
+            showNotification('Profile updated successfully!', 'success');
+        }
+
+        function updateSkillsProjects() {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+
+            const skillsText = document.getElementById('profileSkills').value.trim();
+            const projects = document.getElementById('profileProjects').value.trim();
+            const resume = document.getElementById('profileResume').value.trim();
+
+            students[studentIndex].skills = skillsText ? skillsText.split(',').map(s => s.trim()).filter(s => s) : [];
+            students[studentIndex].projects = projects;
+            students[studentIndex].resume = resume;
+
+            updateSkillsDisplay();
+            showNotification('Skills and projects updated successfully!', 'success');
+        }
+
+        function updateSkillsDisplay() {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const student = currentUser.data;
+            const skillsDisplay = document.getElementById('skillsDisplay');
+            
+            if (student.skills.length === 0) {
+                skillsDisplay.innerHTML = '<p style="color: #64748b; font-style: italic;">No skills added yet</p>';
+                return;
+            }
+
+            const skillsHTML = student.skills.map(skill => 
+                `<span class="skill-tag">${skill}</span>`
+            ).join('');
+            
+            skillsDisplay.innerHTML = skillsHTML;
+        }
+
+        function applyJob(jobId) {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const job = jobs.find(j => j.id === jobId);
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+
+            if (!job.applicants.includes(student.rollNo)) {
+                job.applicants.push(student.rollNo);
+                students[studentIndex].appliedJobs.push(jobId);
+                
+                loadJobsList();
+                updateStatistics();
+                showNotification('Successfully marked as applied!', 'success');
+            }
+        }
+
+        // Test functions
+        function startTest(testType) {
+            if (testType === 'aptitude') {
+                currentTest = 'aptitude';
+                currentQuestionIndex = 0;
+                testAnswers = [];
+                showTestQuestion();
+            }
+        }
+
+        function showTestQuestion() {
+            if (currentQuestionIndex >= aptitudeQuestions.length) {
+                finishTest();
+                return;
+            }
+
+            const question = aptitudeQuestions[currentQuestionIndex];
+            const progress = ((currentQuestionIndex) / aptitudeQuestions.length) * 100;
+
+            const testHTML = `
+                <div class="test-card">
+                    <div class="test-progress">
+                        <div class="test-progress-bar" style="width: ${progress}%"></div>
+                    </div>
+                    <p><strong>Question ${currentQuestionIndex + 1} of ${aptitudeQuestions.length}</strong></p>
+                    <div class="test-question">${question.question}</div>
+                    <div class="test-options">
+                        ${question.options.map((option, index) => `
+                            <div class="test-option" onclick="selectOption(${index})" id="option-${index}">
+                                ${String.fromCharCode(65 + index)}. ${option}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button class="btn btn-small" onclick="submitAnswer()" id="submitBtn" disabled>Submit Answer</button>
+                        ${currentQuestionIndex > 0 ? '<button class="btn btn-small" onclick="previousQuestion()" style="margin-left: 10px;">Previous</button>' : ''}
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('testArea').innerHTML = testHTML;
+        }
+
+        function selectOption(optionIndex) {
+            // Clear previous selections
+            document.querySelectorAll('.test-option').forEach(opt => opt.classList.remove('selected'));
+            
+            // Select current option
+            document.getElementById(`option-${optionIndex}`).classList.add('selected');
+            testAnswers[currentQuestionIndex] = optionIndex;
+            
+            // Enable submit button
+            document.getElementById('submitBtn').disabled = false;
+        }
+
+        function submitAnswer() {
+            currentQuestionIndex++;
+            showTestQuestion();
+        }
+
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                showTestQuestion();
+            }
+        }
+
+        function finishTest() {
+            let correctAnswers = 0;
+            testAnswers.forEach((answer, index) => {
+                if (answer === aptitudeQuestions[index].correct) {
+                    correctAnswers++;
+                }
+            });
+
+            const score = Math.round((correctAnswers / aptitudeQuestions.length) * 100);
+            
+            // Save test score
+            if (currentUser && currentUser.type === 'student') {
+                const student = currentUser.data;
+                const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+                
+                students[studentIndex].testScores.push({
+                    id: Date.now(),
+                    type: 'aptitude',
+                    company: 'Practice Test',
+                    score: `${score}% (${correctAnswers}/${aptitudeQuestions.length})`,
+                    date: new Date().toISOString().split('T')[0]
+                });
+                
+                loadTestScores();
+            }
+
+            const resultHTML = `
+                <div class="test-card">
+                    <div style="text-align: center;">
+                        <h4 style="color: #f59e0b; margin-bottom: 20px;">Test Completed!</h4>
+                        <div class="stat-card" style="max-width: 300px; margin: 0 auto;">
+                            <span class="stat-number">${score}%</span>
+                            <span class="stat-label">Your Score</span>
+                        </div>
+                        <p style="margin: 20px 0;">You answered ${correctAnswers} out of ${aptitudeQuestions.length} questions correctly.</p>
+                        <button class="btn btn-small" onclick="startTest('aptitude')">Retake Test</button>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('testArea').innerHTML = resultHTML;
+            showNotification(`Test completed! Your score: ${score}%`, 'success');
+        }
+
+        function loadTestScores() {
+            if (!currentUser || currentUser.type !== 'student') return;
+
+            const student = currentUser.data;
+            const testScoresList = document.getElementById('testScoresList');
+
+            if (student.testScores.length === 0) {
+                testScoresList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-chart-line"></i>
+                        <p>No test scores recorded yet. Take a practice test to get started!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const scoresHTML = student.testScores.map(score => `
+                <div class="job-card">
+                    <h4>${score.company} - ${score.type === 'aptitude' ? 'Aptitude Test' : 'Technical Test'}</h4>
+                    <p><strong>Score:</strong> ${score.score}</p>
+                    <p><strong>Date:</strong> ${formatDate(score.date)}</p>
+                </div>
+            `).join('');
+
+            testScoresList.innerHTML = scoresHTML;
+        }
+
+        function loadHRQuestions() {
+            const hrQuestionsList = document.getElementById('hrQuestionsList');
+            
+            // Group questions by company
+            const questionsByCompany = {};
+            hrQuestions.forEach(q => {
+                if (!questionsByCompany[q.company]) {
+                    questionsByCompany[q.company] = [];
+                }
+                questionsByCompany[q.company].push(q.question);
+            });
+
+            let questionsHTML = '';
+            Object.keys(questionsByCompany).forEach(company => {
+                questionsHTML += `
+                    <div class="test-card">
+                        <h4 style="color: #f59e0b; margin-bottom: 15px;">${company}</h4>
+                        ${questionsByCompany[company].map(question => `
+                            <div class="question-item">
+                                <strong>Q:</strong> ${question}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            });
+
+            hrQuestionsList.innerHTML = questionsHTML;
+        }
+
+        // Utility functions
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-IN', { 
+                year: 'numeric', 
+                month: 'short', 
+                day: 'numeric' 
+            });
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    clearModalInputs();
+                }
+            });
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const openModal = document.querySelector('.modal[style*="display: block"]');
+                if (openModal) {
+                    openModal.style.display = 'none';
+                    clearModalInputs();
+                }
+            }
+        });
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatistics();
+            
+            // Set minimum date for job posting
+            const today = new Date().toISOString().split('T')[0];
+            const startDateInput = document.getElementById('jobStartDate');
+            const endDateInput = document.getElementById('jobEndDate');
+            
+            if (startDateInput) startDateInput.min = today;
+            if (endDateInput) endDateInput.min = today;
+            
+            // Update end date minimum when start date changes
+            if (startDateInput) {
+                startDateInput.addEventListener('change', function() {
+                    endDateInput.min = this.value;
+                });
+            }
+        });
+
+        // Auto-save functionality for student profile
+        let autoSaveTimeout;
+        function autoSaveProfile() {
+            clearTimeout(autoSaveTimeout);
+            autoSaveTimeout = setTimeout(() => {
+                if (currentUser && currentUser.type === 'student') {
+                    updateSkillsDisplay();
+                }
+            }, 2000);
+        }
+
+        // Add event listeners for auto-save
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileInputs = document.querySelectorAll('#student-profile input, #student-profile textarea');
+            profileInputs.forEach(input => {
+                if (input.id === 'profileSkills') {
+                    input.addEventListener('input', autoSaveProfile);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
