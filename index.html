@@ -11,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
@@ -19,14 +18,11 @@
             color: #e4e4e7;
             min-height: 100vh;
         }
-
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Header */
         .header {
             background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
             border: 1px solid #374151;
@@ -37,7 +33,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .header::before {
             content: '';
             position: absolute;
@@ -48,7 +43,6 @@
             background: radial-gradient(circle at 30% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
-
         .logo-section {
             display: flex;
             align-items: center;
@@ -58,7 +52,6 @@
             position: relative;
             z-index: 1;
         }
-
         .logo {
             width: 80px;
             height: 80px;
@@ -72,21 +65,17 @@
             font-weight: 800;
             box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
         }
-
         h1 {
             color: #f8fafc;
             font-size: 2.8rem;
             margin-bottom: 10px;
             font-weight: 700;
         }
-
         .subtitle {
             color: #cbd5e1;
             font-size: 1.2rem;
             font-weight: 400;
         }
-
-        /* Success Stories Section */
         .success-stories {
             background: #1e293b;
             border: 1px solid #334155;
@@ -94,7 +83,6 @@
             padding: 40px;
             margin-bottom: 30px;
         }
-
         .section-title {
             color: #f1f5f9;
             font-size: 2.2rem;
@@ -102,14 +90,12 @@
             text-align: center;
             font-weight: 600;
         }
-
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
         }
-
         .stat-card {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             border: 1px solid #374151;
@@ -120,7 +106,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .stat-card::before {
             content: '';
             position: absolute;
@@ -130,12 +115,10 @@
             height: 4px;
             background: linear-gradient(90deg, #f59e0b, #ef4444, #8b5cf6);
         }
-
         .stat-card:hover {
             transform: translateY(-5px);
             border-color: #f59e0b;
         }
-
         .stat-number {
             font-size: 2.8rem;
             font-weight: 800;
@@ -143,19 +126,16 @@
             color: #f59e0b;
             margin-bottom: 8px;
         }
-
         .stat-label {
             font-size: 1rem;
             color: #94a3b8;
             font-weight: 500;
         }
-
         .achievement-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 25px;
         }
-
         .achievement-card {
             background: #0f172a;
             border: 1px solid #334155;
@@ -164,32 +144,26 @@
             border-left: 4px solid #f59e0b;
             transition: all 0.3s ease;
         }
-
         .achievement-card:hover {
             border-left-color: #ef4444;
             transform: translateX(5px);
         }
-
         .achievement-card h3 {
             color: #f1f5f9;
             margin-bottom: 15px;
             font-size: 1.3rem;
             font-weight: 600;
         }
-
         .achievement-card p {
             color: #cbd5e1;
             line-height: 1.6;
         }
-
-        /* Login Section */
         .login-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 40px;
             margin-bottom: 30px;
         }
-
         .login-card {
             background: #1e293b;
             border: 1px solid #334155;
@@ -198,12 +172,10 @@
             text-align: center;
             transition: all 0.3s ease;
         }
-
         .login-card:hover {
             border-color: #f59e0b;
             box-shadow: 0 20px 40px rgba(245, 158, 11, 0.1);
         }
-
         .login-icon {
             width: 90px;
             height: 90px;
@@ -217,25 +189,21 @@
             font-size: 2.2rem;
             box-shadow: 0 15px 30px rgba(245, 158, 11, 0.3);
         }
-
         .login-card h3 {
             color: #f1f5f9;
             font-size: 1.6rem;
             margin-bottom: 10px;
             font-weight: 600;
         }
-
         .login-card p {
             color: #94a3b8;
             margin-bottom: 30px;
             line-height: 1.5;
         }
-
         .form-group {
             margin-bottom: 25px;
             text-align: left;
         }
-
         label {
             display: block;
             margin-bottom: 8px;
@@ -243,8 +211,7 @@
             font-weight: 500;
             font-size: 0.95rem;
         }
-
-        input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"], select, textarea {
+        input[type="text"], input[type="password"], input[type="email"], input[type="date"], input[type="number"], input[type="file"], select, textarea {
             width: 100%;
             padding: 15px;
             background: #0f172a;
@@ -254,13 +221,11 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-
         input:focus, select:focus, textarea:focus {
             outline: none;
             border-color: #f59e0b;
             box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
         }
-
         .btn {
             background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
             color: white;
@@ -275,7 +240,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .btn::before {
             content: '';
             position: absolute;
@@ -286,33 +250,25 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s;
         }
-
         .btn:hover::before {
             left: 100%;
         }
-
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
         }
-
         .btn-secondary {
             background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
         }
-
         .btn-secondary:hover {
             box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
         }
-
-        /* Dashboard Styles */
         .dashboard {
             display: none;
         }
-
         .dashboard.active {
             display: block;
         }
-
         .dashboard-header {
             background: #1e293b;
             border: 1px solid #334155;
@@ -325,13 +281,11 @@
             flex-wrap: wrap;
             gap: 20px;
         }
-
         .dashboard-header h2 {
             color: #f1f5f9;
             font-size: 1.8rem;
             font-weight: 600;
         }
-
         .nav-tabs {
             display: flex;
             gap: 15px;
@@ -342,7 +296,6 @@
             border-radius: 15px;
             border: 1px solid #374151;
         }
-
         .nav-tab {
             padding: 12px 24px;
             background: transparent;
@@ -353,17 +306,14 @@
             transition: all 0.3s ease;
             font-weight: 500;
         }
-
         .nav-tab:hover {
             color: #f1f5f9;
             background: #1e293b;
         }
-
         .nav-tab.active {
             background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
             color: white;
         }
-
         .tab-content {
             display: none;
             background: #1e293b;
@@ -371,18 +321,15 @@
             border-radius: 20px;
             padding: 30px;
         }
-
         .tab-content.active {
             display: block;
         }
-
         .tab-content h3 {
             color: #f1f5f9;
             font-size: 1.5rem;
             margin-bottom: 25px;
             font-weight: 600;
         }
-
         .job-card, .student-card {
             background: #0f172a;
             border: 1px solid #374151;
@@ -392,46 +339,38 @@
             transition: all 0.3s ease;
             border-left: 4px solid #f59e0b;
         }
-
         .job-card:hover, .student-card:hover {
             border-left-color: #ef4444;
             transform: translateY(-2px);
         }
-
         .job-card h4, .student-card h4 {
             color: #f1f5f9;
             font-size: 1.3rem;
             margin-bottom: 15px;
             font-weight: 600;
         }
-
         .job-card p, .student-card p {
             color: #cbd5e1;
             margin-bottom: 10px;
         }
-
         .job-actions {
             display: flex;
             gap: 15px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
         .btn-small {
             padding: 10px 20px;
             font-size: 0.9rem;
             width: auto;
             min-width: 120px;
         }
-
         .btn-danger {
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         }
-
         .btn-danger:hover {
             box-shadow: 0 10px 25px rgba(239, 68, 68, 0.4);
         }
-
         .modal {
             display: none;
             position: fixed;
@@ -443,7 +382,6 @@
             background-color: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
         }
-
         .modal-content {
             background: #1e293b;
             border: 1px solid #334155;
@@ -456,7 +394,6 @@
             overflow-y: auto;
             color: #f1f5f9;
         }
-
         .close {
             color: #94a3b8;
             float: right;
@@ -465,64 +402,15 @@
             cursor: pointer;
             transition: color 0.3s;
         }
-
         .close:hover {
             color: #f59e0b;
         }
-
         .modal h3 {
             color: #f1f5f9;
             margin-bottom: 25px;
             font-size: 1.5rem;
             font-weight: 600;
         }
-
-        .hr-questions {
-            background: #0f172a;
-            border: 1px solid #374151;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-        }
-
-        .question-item {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 12px;
-            border-left: 4px solid #f59e0b;
-            transition: all 0.3s ease;
-        }
-
-        .question-item:hover {
-            border-left-color: #ef4444;
-        }
-
-        .question-item strong {
-            color: #f59e0b;
-        }
-
-        .profile-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-        }
-
-        .profile-card {
-            background: #0f172a;
-            border: 1px solid #374151;
-            border-radius: 15px;
-            padding: 25px;
-        }
-
-        .profile-card h4 {
-            color: #f1f5f9;
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
-
         .skill-tag {
             display: inline-block;
             background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
@@ -534,7 +422,66 @@
             margin: 4px;
             box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
-
+        .skill-level-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .level-beginner {
+            background: #10b981;
+            color: white;
+        }
+        .level-intermediate {
+            background: #f59e0b;
+            color: white;
+        }
+        .level-advanced {
+            background: #ef4444;
+            color: white;
+        }
+        .project-card {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .project-card h5 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .company-registration-status {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .registration-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .stat-mini {
+            text-align: center;
+            padding: 10px;
+            background: #1e293b;
+            border-radius: 8px;
+        }
+        .stat-mini .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #f59e0b;
+        }
+        .stat-mini .label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
         .notification {
             position: fixed;
             top: 25px;
@@ -547,15 +494,70 @@
             display: none;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
         .notification.success {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         }
-
         .notification.error {
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
         }
-
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #475569;
+        }
+        .file-upload {
+            border: 2px dashed #374151;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .file-upload:hover {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.1);
+        }
+        .skill-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .skill-category {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 15px;
+        }
+        .skill-category h5 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .skill-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px;
+            margin-bottom: 5px;
+            background: #1e293b;
+            border-radius: 8px;
+        }
+        .skill-checkbox {
+            margin-right: 10px;
+        }
+        .skill-level-select {
+            width: auto;
+            min-width: 100px;
+            padding: 5px;
+            font-size: 0.8rem;
+        }
         .test-section {
             background: #0f172a;
             border: 1px solid #374151;
@@ -563,7 +565,6 @@
             padding: 25px;
             margin: 20px 0;
         }
-
         .test-header {
             display: flex;
             justify-content: space-between;
@@ -572,7 +573,6 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
         .test-card {
             background: #1e293b;
             border: 1px solid #334155;
@@ -581,20 +581,17 @@
             margin-bottom: 20px;
             border-left: 4px solid #8b5cf6;
         }
-
         .test-question {
             color: #f1f5f9;
             font-size: 1.1rem;
             margin-bottom: 20px;
             font-weight: 500;
         }
-
         .test-options {
             display: grid;
             gap: 12px;
             margin-bottom: 20px;
         }
-
         .test-option {
             background: #0f172a;
             border: 1px solid #374151;
@@ -604,18 +601,15 @@
             transition: all 0.3s ease;
             color: #cbd5e1;
         }
-
         .test-option:hover {
             border-color: #f59e0b;
             background: #1e293b;
         }
-
         .test-option.selected {
             border-color: #f59e0b;
             background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
             color: #f59e0b;
         }
-
         .test-progress {
             background: #0f172a;
             height: 8px;
@@ -623,82 +617,90 @@
             margin: 20px 0;
             overflow: hidden;
         }
-
         .test-progress-bar {
             background: linear-gradient(90deg, #f59e0b, #ef4444);
             height: 100%;
             border-radius: 4px;
             transition: width 0.3s ease;
         }
-
+        .hr-question-card, .technical-question-card {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #8b5cf6;
+        }
+        .hr-question-card h5, .technical-question-card h5 {
+            color: #f59e0b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .profile-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .profile-card {
+            background: #0f172a;
+            border: 1px solid #374151;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        .profile-card h4 {
+            color: #f59e0b;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-            
             h1 {
                 font-size: 2.2rem;
             }
-            
             .logo-section {
                 flex-direction: column;
             }
-            
             .stats-grid {
                 grid-template-columns: 1fr;
             }
-            
             .login-section {
                 grid-template-columns: 1fr;
             }
-            
             .nav-tabs {
                 flex-direction: column;
             }
-            
             .job-actions {
                 flex-direction: column;
             }
-            
             .dashboard-header {
                 flex-direction: column;
                 text-align: center;
             }
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
         }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
-
         ::-webkit-scrollbar-track {
             background: #0f172a;
         }
-
         ::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
             border-radius: 4px;
         }
-
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(135deg, #ef4444 0%, #f59e0b 100%);
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 40px;
-            color: #64748b;
-        }
-
-        .empty-state i {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: #475569;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
         <!-- Header -->
         <div class="header">
             <div class="logo-section">
@@ -709,20 +711,18 @@
                 </div>
             </div>
         </div>
-
         <!-- Home Page -->
         <div id="homePage">
             <!-- Success Stories -->
             <div class="success-stories">
                 <h2 class="section-title"><i class="fas fa-trophy"></i> Our Success Stories</h2>
-                
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <span class="stat-number">107</span>
+                        <span class="stat-number">150</span>
                         <span class="stat-label">Students Placed</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">₹2.60</span>
+                        <span class="stat-number">₹4.50</span>
                         <span class="stat-label">LPA Average Package</span>
                     </div>
                     <div class="stat-card">
@@ -730,15 +730,14 @@
                         <span class="stat-label">LPA Highest Package</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">50+</span>
+                        <span class="stat-number">75+</span>
                         <span class="stat-label">Partner Companies</span>
                     </div>
                 </div>
-
                 <div class="achievement-cards">
                     <div class="achievement-card">
-                        <h3><i class="fas fa-award"></i> KYB Placement Success</h3>
-                        <p>107 students successfully placed in KYB with an average package of ₹2.60 LPA, showcasing our commitment to excellence in placement.</p>
+                        <h3><i class="fas fa-award"></i> Top Company Placements</h3>
+                        <p>Students placed in leading companies like Amazon, Wipro, TCS, Infosys, and MeetMux with competitive packages and growth opportunities.</p>
                     </div>
                     <div class="achievement-card">
                         <h3><i class="fas fa-star"></i> Amazon Achievement</h3>
@@ -750,7 +749,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Login Section -->
             <div class="login-section">
                 <!-- Admin Login -->
@@ -760,7 +758,6 @@
                     </div>
                     <h3>Admin Portal</h3>
                     <p>Access comprehensive placement management tools and student analytics.</p>
-                    
                     <div class="form-group">
                         <label for="adminUsername">Username</label>
                         <input type="text" id="adminUsername" placeholder="Enter admin username">
@@ -771,7 +768,6 @@
                     </div>
                     <button class="btn" onclick="adminLogin()">Access Admin Portal</button>
                 </div>
-
                 <!-- Student Login -->
                 <div class="login-card">
                     <div class="login-icon">
@@ -779,7 +775,6 @@
                     </div>
                     <h3>Student Portal</h3>
                     <p>Your gateway to placement opportunities, tests, and career resources.</p>
-                    
                     <div class="form-group">
                         <label for="studentRollNo">Roll Number</label>
                         <input type="text" id="studentRollNo" placeholder="Enter your roll number">
@@ -792,60 +787,66 @@
                 </div>
             </div>
         </div>
-
         <!-- Admin Dashboard -->
         <div id="adminDashboard" class="dashboard">
             <div class="dashboard-header">
                 <h2><i class="fas fa-tachometer-alt"></i> Admin Dashboard</h2>
                 <button class="btn btn-small" onclick="logout()">Logout</button>
             </div>
-
             <div class="nav-tabs">
-                <button class="nav-tab active" onclick="showTab('admin-jobs', this)">Job Management</button>
+                <button class="nav-tab active" onclick="showTab('admin-companies', this)">Company Management</button>
                 <button class="nav-tab" onclick="showTab('admin-students', this)">Student Management</button>
                 <button class="nav-tab" onclick="showTab('admin-groups', this)">WhatsApp Groups</button>
                 <button class="nav-tab" onclick="showTab('admin-notifications', this)">Send Notifications</button>
                 <button class="nav-tab" onclick="showTab('admin-stats', this)">Statistics</button>
             </div>
-
-            <!-- Job Management Tab -->
-            <div id="admin-jobs" class="tab-content active">
-                <div class="test-header">
-                    <h3>Job Postings Management</h3>
-                    <button class="btn btn-small" onclick="showModal('postJobModal')">Post New Job</button>
+            <!-- Company Management Tab -->
+            <div id="admin-companies" class="tab-content active">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                    <h3>Company Management</h3>
+                    <button class="btn btn-small" onclick="showModal('addCompanyModal')">Add New Company</button>
                 </div>
-                <div id="jobsList"></div>
+                <div id="companiesList"></div>
             </div>
-
             <!-- Student Management Tab -->
             <div id="admin-students" class="tab-content">
                 <h3>Student Management</h3>
                 <div id="studentsList"></div>
             </div>
-
             <!-- WhatsApp Groups Tab -->
             <div id="admin-groups" class="tab-content">
-                <div class="test-header">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
                     <h3>WhatsApp Groups Management</h3>
                     <button class="btn btn-small" onclick="showModal('addGroupModal')">Add New Group</button>
                 </div>
                 <div id="groupsList"></div>
             </div>
-
             <!-- Notifications Tab -->
             <div id="admin-notifications" class="tab-content">
                 <h3>Send Email Notifications</h3>
+                <div class="form-group">
+                    <label for="emailType">Email Type</label>
+                    <select id="emailType" onchange="toggleEmailInputs()">
+                        <option value="all">Send to All Students</option>
+                        <option value="individual">Send to Individual Student</option>
+                    </select>
+                </div>
+                <div id="individualEmailSection" style="display: none;">
+                    <div class="form-group">
+                        <label for="selectedStudent">Select Student</label>
+                        <select id="selectedStudent"></select>
+                    </div>
+                </div>
                 <div class="form-group">
                     <label for="emailSubject">Subject</label>
                     <input type="text" id="emailSubject" placeholder="Enter email subject">
                 </div>
                 <div class="form-group">
                     <label for="emailMessage">Message</label>
-                    <textarea id="emailMessage" rows="6" placeholder="Enter your message to students"></textarea>
+                    <textarea id="emailMessage" rows="6" placeholder="Enter your message"></textarea>
                 </div>
-                <button class="btn" onclick="sendNotification()">Send to All Students</button>
+                <button class="btn" onclick="sendNotification()">Send Email</button>
             </div>
-
             <!-- Statistics Tab -->
             <div id="admin-stats" class="tab-content">
                 <h3>Placement Statistics Overview</h3>
@@ -855,67 +856,67 @@
                         <span class="stat-label">Total Students</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="appliedStudents">0</span>
-                        <span class="stat-label">Applied Students</span>
+                        <span class="stat-number" id="registeredStudents">0</span>
+                        <span class="stat-label">Registered Students</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="notAppliedStudents">5</span>
-                        <span class="stat-label">Not Applied</span>
+                        <span class="stat-number" id="notRegisteredStudents">5</span>
+                        <span class="stat-label">Not Registered</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number" id="totalJobs">0</span>
-                        <span class="stat-label">Active Jobs</span>
+                        <span class="stat-number" id="totalCompanies">0</span>
+                        <span class="stat-label">Active Companies</span>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Student Dashboard -->
         <div id="studentDashboard" class="dashboard">
             <div class="dashboard-header">
                 <h2><i class="fas fa-user-graduate"></i> Student Dashboard</h2>
                 <button class="btn btn-small" onclick="logout()">Logout</button>
             </div>
-
             <div class="nav-tabs">
-                <button class="nav-tab active" onclick="showTab('student-jobs', this)">Job Opportunities</button>
+                <button class="nav-tab active" onclick="showTab('student-companies', this)">Companies</button>
                 <button class="nav-tab" onclick="showTab('student-groups', this)">WhatsApp Groups</button>
-                <button class="nav-tab" onclick="showTab('student-tests', this)">Practice Tests</button>
-                <button class="nav-tab" onclick="showTab('student-hr', this)">HR Questions</button>
+                <button class="nav-tab" onclick="showTab('student-tests', this)">Tests</button>
+                <button class="nav-tab" onclick="showTab('student-hr', this)">HR & Technical Questions</button>
                 <button class="nav-tab" onclick="showTab('student-profile', this)">My Profile</button>
+                <button class="nav-tab" onclick="showTab('student-projects', this)">Projects</button>
+                <button class="nav-tab" onclick="showTab('student-skills', this)">Skills</button>
             </div>
-
-            <!-- Available Jobs Tab -->
-            <div id="student-jobs" class="tab-content active">
-                <h3>Available Job Opportunities</h3>
-                <div id="studentJobsList"></div>
+            <!-- Companies Tab -->
+            <div id="student-companies" class="tab-content active">
+                <h3>Available Companies</h3>
+                <div id="studentCompaniesList"></div>
             </div>
-
             <!-- WhatsApp Groups Tab -->
             <div id="student-groups" class="tab-content">
                 <h3>WhatsApp Groups</h3>
                 <div id="studentGroupsList"></div>
             </div>
-
             <!-- Tests Tab -->
             <div id="student-tests" class="tab-content">
                 <h3>Practice Tests & Assessments</h3>
                 <div class="test-section">
                     <div class="test-header">
                         <h4>Available Tests</h4>
-                        <button class="btn btn-small" onclick="startTest('aptitude')">Start Aptitude Test</button>
+                        <div class="job-actions">
+                            <button class="btn btn-small" onclick="startTest('aptitude')">Start Aptitude Test</button>
+                            <button class="btn btn-small btn-secondary" onclick="startTest('reasoning')">Start Reasoning Test</button>
+                        </div>
                     </div>
                     <div id="testArea"></div>
                     <div id="testScoresList"></div>
                 </div>
             </div>
-
-            <!-- HR Questions Tab -->
+            <!-- HR & Technical Questions Tab -->
             <div id="student-hr" class="tab-content">
-                <h3>HR Interview Questions Bank</h3>
+                <h3>HR & Technical Questions Bank</h3>
                 <div class="hr-questions" id="hrQuestionsList"></div>
+                <h3 style="margin-top: 30px;">Technical Coding Questions</h3>
+                <div id="technicalQuestionsList"></div>
             </div>
-
             <!-- Profile Tab -->
             <div id="student-profile" class="tab-content">
                 <h3>My Profile</h3>
@@ -938,103 +939,317 @@
                             <label>Phone</label>
                             <input type="text" id="profilePhone">
                         </div>
+                        <div class="form-group">
+                            <label>Resume Upload</label>
+                            <div class="file-upload" onclick="document.getElementById('resumeFile').click()">
+                                <i class="fas fa-upload"></i>
+                                <p>Click to upload your resume</p>
+                                <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" style="display: none;" onchange="handleResumeUpload(this)">
+                            </div>
+                            <div id="resumeStatus"></div>
+                        </div>
                         <button class="btn" onclick="updateProfile()">Update Profile</button>
                     </div>
-
                     <div class="profile-card">
-                        <h4>Skills & Projects</h4>
-                        <div class="form-group">
-                            <label>Skills</label>
-                            <input type="text" id="profileSkills" placeholder="e.g., Java, Python, React">
-                            <small style="color: #94a3b8;">Separate skills with commas</small>
-                        </div>
-                        <div id="skillsDisplay" style="margin: 15px 0;"></div>
-                        <div class="form-group">
-                            <label>Project Links</label>
-                            <textarea id="profileProjects" rows="4" placeholder="Enter your project links (one per line)"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Resume Link</label>
-                            <input type="text" id="profileResume" placeholder="Google Drive or other resume link">
-                        </div>
-                        <button class="btn" onclick="updateSkillsProjects()">Update Skills & Projects</button>
+                        <h4>Test Scores</h4>
+                        <div id="testScores"></div>
+                    </div>
+                    <div class="profile-card">
+                        <h4>Registration Status</h4>
+                        <div id="registrationStatus"></div>
                     </div>
                 </div>
             </div>
+            <!-- Projects Tab -->
+            <div id="student-projects" class="tab-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px;">
+                    <h3>My Projects</h3>
+                    <button class="btn btn-small" onclick="showModal('addProjectModal')">Add New Project</button>
+                </div>
+                <div id="projectsList"></div>
+            </div>
+            <!-- Skills Tab -->
+            <div id="student-skills" class="tab-content">
+                <h3>My Skills</h3>
+                <div style="margin-bottom: 20px;">
+                    <button class="btn btn-small" onclick="showModal('addSkillModal')">Add/Update Skills</button>
+                </div>
+                <div id="skillsList"></div>
+            </div>
+        </div>
+        <!-- Modals -->
+        <!-- Add Company Modal -->
+        <div id="addCompanyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('addCompanyModal')">&times;</span>
+                <h3>Add New Company</h3>
+                <div class="form-group">
+                    <label for="companyName">Company Name *</label>
+                    <input type="text" id="companyName" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyRole">Role *</label>
+                    <input type="text" id="companyRole" placeholder="Enter job role" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyPackage">Package (LPA) *</label>
+                    <input type="number" id="companyPackage" placeholder="Enter package in LPA" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyDescription">Job Description *</label>
+                    <textarea id="companyDescription" rows="4" placeholder="Enter detailed job description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="companyStartDate">Registration Start Date *</label>
+                    <input type="date" id="companyStartDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyEndDate">Registration End Date *</label>
+                    <input type="date" id="companyEndDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="companyLink">Career/Application Link *</label>
+                    <input type="text" id="companyLink" placeholder="Enter company career page link" required>
+                </div>
+                <button class="btn" onclick="addCompany()">Add Company</button>
+            </div>
+        </div>
+        <!-- Add Group Modal -->
+        <div id="addGroupModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('addGroupModal')">&times;</span>
+                <h3>Add WhatsApp Group</h3>
+                <div class="form-group">
+                    <label for="groupName">Group Name *</label>
+                    <input type="text" id="groupName" placeholder="Enter group name" required>
+                </div>
+                <div class="form-group">
+                    <label for="groupLink">WhatsApp Link *</label>
+                    <input type="text" id="groupLink" placeholder="Enter WhatsApp group invite link" required>
+                </div>
+                <div class="form-group">
+                    <label for="groupDescription">Description</label>
+                    <textarea id="groupDescription" rows="3" placeholder="Enter group description (optional)"></textarea>
+                </div>
+                <button class="btn" onclick="addGroup()">Add Group</button>
+            </div>
+        </div>
+        <!-- Add Project Modal -->
+        <div id="addProjectModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('addProjectModal')">&times;</span>
+                <h3>Add New Project</h3>
+                <div class="form-group">
+                    <label for="projectTitle">Project Title *</label>
+                    <input type="text" id="projectTitle" placeholder="Enter project title" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Project Description *</label>
+                    <textarea id="projectDescription" rows="4" placeholder="Describe your project" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectLink">Project Link</label>
+                    <input type="text" id="projectLink" placeholder="GitHub, Live demo, or other project link">
+                </div>
+                <div class="form-group">
+                    <label for="projectPPT">PPT/Presentation Link</label>
+                    <input type="text" id="projectPPT" placeholder="Google Drive or other PPT link">
+                </div>
+                <div class="form-group">
+                    <label for="projectReport">Report Link</label>
+                    <input type="text" id="projectReport" placeholder="Google Drive or other report link">
+                </div>
+                <div class="form-group">
+                    <label for="projectTechnologies">Technologies Used</label>
+                    <input type="text" id="projectTechnologies" placeholder="e.g., React, Node.js, MongoDB">
+                </div>
+                <button class="btn" onclick="addProject()">Add Project</button>
+            </div>
+        </div>
+        <!-- Add Skill Modal -->
+        <div id="addSkillModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('addSkillModal')">&times;</span>
+                <h3>Add/Update Skills</h3>
+                <div class="skill-selector" id="skillSelector"></div>
+                <button class="btn" onclick="updateSkills()">Update Skills</button>
+            </div>
+        </div>
+        <!-- Company Registration Status Modal -->
+        <div id="companyStatusModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('companyStatusModal')">&times;</span>
+                <h3 id="companyStatusTitle">Company Registration Status</h3>
+                <div id="companyStatusContent"></div>
+            </div>
+        </div>
+        <!-- Send Individual Email Modal -->
+        <div id="sendEmailModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="hideModal('sendEmailModal')">&times;</span>
+                <h3>Send Email to Student</h3>
+                <div class="form-group">
+                    <label for="individualEmailSubject">Subject</label>
+                    <input type="text" id="individualEmailSubject" placeholder="Enter email subject">
+                </div>
+                <div class="form-group">
+                    <label for="individualEmailMessage">Message</label>
+                    <textarea id="individualEmailMessage" rows="6" placeholder="Enter your message"></textarea>
+                </div>
+                <button class="btn" onclick="sendIndividualEmail()">Send Email</button>
+            </div>
         </div>
     </div>
-
-    <!-- Modals -->
-    <!-- Post Job Modal -->
-    <div id="postJobModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="hideModal('postJobModal')">&times;</span>
-            <h3>Post New Job Opportunity</h3>
-            <div class="form-group">
-                <label for="jobCompany">Company Name *</label>
-                <input type="text" id="jobCompany" placeholder="Enter company name" required>
-            </div>
-            <div class="form-group">
-                <label for="jobTitle">Job Title *</label>
-                <input type="text" id="jobTitle" placeholder="Enter job title" required>
-            </div>
-            <div class="form-group">
-                <label for="jobDescription">Job Description *</label>
-                <textarea id="jobDescription" rows="4" placeholder="Enter detailed job description" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="jobStartDate">Application Start Date *</label>
-                <input type="date" id="jobStartDate" required>
-            </div>
-            <div class="form-group">
-                <label for="jobEndDate">Application End Date *</label>
-                <input type="date" id="jobEndDate" required>
-            </div>
-            <div class="form-group">
-                <label for="jobLink">Application Link *</label>
-                <input type="text" id="jobLink" placeholder="Enter application/company link" required>
-            </div>
-            <button class="btn" onclick="postJob()">Post Job Opportunity</button>
-        </div>
-    </div>
-
-    <!-- Add Group Modal -->
-    <div id="addGroupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="hideModal('addGroupModal')">&times;</span>
-            <h3>Add WhatsApp Group</h3>
-            <div class="form-group">
-                <label for="groupName">Group Name *</label>
-                <input type="text" id="groupName" placeholder="Enter group name" required>
-            </div>
-            <div class="form-group">
-                <label for="groupLink">WhatsApp Link *</label>
-                <input type="text" id="groupLink" placeholder="Enter WhatsApp group invite link" required>
-            </div>
-            <div class="form-group">
-                <label for="groupDescription">Description</label>
-                <textarea id="groupDescription" rows="3" placeholder="Enter group description (optional)"></textarea>
-            </div>
-            <button class="btn" onclick="addGroup()">Add Group</button>
-        </div>
-    </div>
-
-    <!-- Notification -->
-    <div id="notification" class="notification"></div>
-
     <script>
-        // Sample data
+        // Data Structures
+        let currentUser = null;
+        let currentTest = null;
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
+        let currentEmailStudent = null;
+
+        const skillCategories = {
+            Programming: ['Java', 'Python', 'C++', 'JavaScript', 'C#'],
+            Frontend: ['React', 'Angular', 'Vue.js', 'HTML', 'CSS'],
+            Backend: ['Node.js', 'Django', 'Flask', 'Spring Boot'],
+            Database: ['MySQL', 'MongoDB', 'PostgreSQL'],
+            Tools: ['Git', 'Docker', 'Jenkins']
+        };
+
         const students = [
-            { rollNo: '23A95A4404', name: 'Student 1', email: 'student1@aditya.ac.in', phone: '9876543210', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
-            { rollNo: '22A19A4440', name: 'Tevitt Sai Maji', email: 'tevitt@aditya.ac.in', phone: '9876543211', skills: ['Java', 'Python', 'DSA'], projects: 'https://github.com/tevitt/project1', resume: '', appliedJobs: [], testScores: [] },
-            { rollNo: '23A95A4406', name: 'Student 3', email: 'student3@aditya.ac.in', phone: '9876543212', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
-            { rollNo: '23A95A4405', name: 'Student 4', email: 'student4@aditya.ac.in', phone: '9876543213', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] },
-            { rollNo: '23A95A4401', name: 'Student 5', email: 'student5@aditya.ac.in', phone: '9876543214', skills: [], projects: '', resume: '', appliedJobs: [], testScores: [] }
+            {
+                rollNo: '23A95A4404',
+                name: 'Student 1',
+                email: 'student1@aditya.ac.in',
+                phone: '9876543210',
+                skills: [],
+                projects: [],
+                resume: '',
+                appliedCompanies: [],
+                registeredCompanies: [],
+                testScores: []
+            },
+            {
+                rollNo: '22A19A4440',
+                name: 'Tevitt Sai Maji',
+                email: 'tevitt@aditya.ac.in',
+                phone: '9876543211',
+                skills: [
+                    { name: 'Java', level: 'advanced', category: 'programming' },
+                    { name: 'Python', level: 'intermediate', category: 'programming' },
+                    { name: 'React', level: 'intermediate', category: 'frontend' }
+                ],
+                projects: [
+                    {
+                        id: 1,
+                        title: 'E-Commerce Platform',
+                        description: 'Full-stack e-commerce application with payment integration',
+                        link: 'https://github.com/tevitt/ecommerce',
+                        pptLink: '',
+                        reportLink: '',
+                        technologies: 'React, Node.js, MongoDB'
+                    }
+                ],
+                resume: 'https://drive.google.com/example-resume',
+                appliedCompanies: [],
+                registeredCompanies: [],
+                testScores: []
+            },
+            {
+                rollNo: '23A95A4406',
+                name: 'Student 3',
+                email: 'student3@aditya.ac.in',
+                phone: '9876543212',
+                skills: [],
+                projects: [],
+                resume: '',
+                appliedCompanies: [],
+                registeredCompanies: [],
+                testScores: []
+            },
+            {
+                rollNo: '23A95A4405',
+                name: 'Student 4',
+                email: 'student4@aditya.ac.in',
+                phone: '9876543213',
+                skills: [],
+                projects: [],
+                resume: '',
+                appliedCompanies: [],
+                registeredCompanies: [],
+                testScores: []
+            },
+            {
+                rollNo: '23A95A4401',
+                name: 'Student 5',
+                email: 'student5@aditya.ac.in',
+                phone: '9876543214',
+                skills: [],
+                projects: [],
+                resume: '',
+                appliedCompanies: [],
+                registeredCompanies: [],
+                testScores: []
+            }
         ];
 
-        let jobs = [];
-        let groups = [];
-        let currentUser = null;
+        let companies = [
+            {
+                id: 1,
+                name: 'Wipro',
+                role: 'Software Engineer',
+                package: 3.5,
+                description: 'Looking for fresh graduates with strong programming skills in Java, Python, or C++. Good problem-solving abilities and communication skills required.',
+                startDate: '2025-09-15',
+                endDate: '2025-09-30',
+                link: 'https://careers.wipro.com',
+                registeredStudents: []
+            },
+            {
+                id: 2,
+                name: 'TCS',
+                role: 'System Engineer',
+                package: 3.36,
+                description: 'Entry-level position for computer science graduates. Training will be provided. Strong analytical and communication skills preferred.',
+                startDate: '2025-09-20',
+                endDate: '2025-10-05',
+                link: 'https://www.tcs.com/careers',
+                registeredStudents: []
+            },
+            {
+                id: 3,
+                name: 'Infosys',
+                role: 'Programmer Analyst',
+                package: 4.0,
+                description: 'Seeking passionate developers with knowledge in web technologies, databases, and software development lifecycle.',
+                startDate: '2025-09-25',
+                endDate: '2025-10-10',
+                link: 'https://www.infosys.com/careers',
+                registeredStudents: []
+            },
+            {
+                id: 4,
+                name: 'MeetMux',
+                role: 'Full Stack Developer',
+                package: 6.0,
+                description: 'Startup opportunity for developers skilled in modern web technologies. Experience with React, Node.js, and cloud services preferred.',
+                startDate: '2025-09-18',
+                endDate: '2025-10-02',
+                link: 'https://meetmux.com/careers',
+                registeredStudents: []
+            },
+            {
+                id: 5,
+                name: 'Amazon',
+                role: 'SDE-1',
+                package: 28.0,
+                description: 'Looking for exceptional programmers with strong algorithmic skills. Experience with data structures, algorithms, and system design required.',
+                startDate: '2025-09-30',
+                endDate: '2025-10-15',
+                link: 'https://www.amazon.jobs',
+                registeredStudents: []
+            }
+        ];
 
         const hrQuestions = [
             { company: 'Amazon', question: 'Tell me about yourself and why you want to work at Amazon.' },
@@ -1049,6 +1264,20 @@
             { company: 'Infosys', question: 'What are your greatest strengths and weaknesses?' },
             { company: 'Wipro', question: 'How do you handle stress and pressure in the workplace?' },
             { company: 'Accenture', question: 'Describe a challenging project you worked on and how you overcame obstacles.' }
+        ];
+
+        const technicalQuestions = [
+            { company: 'Amazon', question: 'Write a function to reverse a linked list.' },
+            { company: 'Amazon', question: 'Implement a stack using two queues.' },
+            { company: 'Google', question: 'Find the first non-repeating character in a string.' },
+            { company: 'Google', question: 'Design an algorithm to detect a cycle in a graph.' },
+            { company: 'Microsoft', question: 'Write a program to check if a binary tree is a valid BST.' },
+            { company: 'Microsoft', question: 'Implement a function to find the longest palindromic substring.' },
+            { company: 'TCS', question: 'Write a program to find the factorial of a number using recursion.' },
+            { company: 'TCS', question: 'Sort an array of integers using quicksort.' },
+            { company: 'Infosys', question: 'Implement a function to check if two strings are anagrams.' },
+            { company: 'Wipro', question: 'Write a program to find the intersection of two sorted arrays.' },
+            { company: 'Accenture', question: 'Design an algorithm to find the kth smallest element in an unsorted array.' }
         ];
 
         const aptitudeQuestions = [
@@ -1079,98 +1308,60 @@
             }
         ];
 
-        let currentTest = null;
-        let currentQuestionIndex = 0;
-        let testAnswers = [];
-
-        // Authentication functions
-        function adminLogin() {
-            const username = document.getElementById('adminUsername').value.trim();
-            const password = document.getElementById('adminPassword').value.trim();
-
-            if (!username || !password) {
-                showNotification('Please enter both username and password!', 'error');
-                return;
+        const reasoningQuestions = [
+            {
+                question: "If CAT is coded as 3120, how is DOG coded?",
+                options: ["4157", "4167", "4177", "4187"],
+                correct: 2
+            },
+            {
+                question: "Find the odd one out: 7, 13, 19, 25, 30",
+                options: ["7", "13", "19", "30"],
+                correct: 3
+            },
+            {
+                question: "If all roses are flowers, and some flowers are red, which statement is true?",
+                options: ["All roses are red", "Some roses are red", "Some flowers are not red", "Some red things are roses"],
+                correct: 2
+            },
+            {
+                question: "Complete the analogy: Pen is to Write as Knife is to ?",
+                options: ["Cut", "Cook", "Slice", "Chop"],
+                correct: 0
+            },
+            {
+                question: "If today is Wednesday, what day is it after 50 days?",
+                options: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                correct: 1
             }
+        ];
 
-            if (username === 'admin' && password === 'admin123') {
-                currentUser = { type: 'admin', username: 'admin' };
-                showDashboard('admin');
-                showNotification('Welcome to Admin Portal!', 'success');
-            } else {
-                showNotification('Invalid admin credentials!', 'error');
-            }
+        let groups = [];
+
+        // Utility Functions
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
         }
 
-        function studentLogin() {
-            const rollNo = document.getElementById('studentRollNo').value.trim();
-            const password = document.getElementById('studentPassword').value.trim();
-
-            if (!rollNo || !password) {
-                showNotification('Please enter both roll number and password!', 'error');
-                return;
-            }
-
-            const student = students.find(s => s.rollNo === rollNo);
-            if (student && password === rollNo) {
-                currentUser = { type: 'student', rollNo: rollNo, data: student };
-                showDashboard('student');
-                loadStudentProfile();
-                showNotification('Welcome to Student Portal!', 'success');
-            } else {
-                showNotification('Invalid student credentials!', 'error');
-            }
-        }
-
-        function logout() {
-            currentUser = null;
-            document.getElementById('homePage').style.display = 'block';
-            document.getElementById('adminDashboard').style.display = 'none';
-            document.getElementById('studentDashboard').style.display = 'none';
-            clearInputs();
-            showNotification('Logged out successfully!', 'success');
-        }
-
-        function clearInputs() {
-            document.getElementById('adminUsername').value = '';
-            document.getElementById('adminPassword').value = '';
-            document.getElementById('studentRollNo').value = '';
-            document.getElementById('studentPassword').value = '';
-        }
-
-        // Dashboard functions
-        function showDashboard(type) {
-            document.getElementById('homePage').style.display = 'none';
-            if (type === 'admin') {
-                document.getElementById('adminDashboard').style.display = 'block';
-                document.getElementById('studentDashboard').style.display = 'none';
-                loadAdminData();
-            } else {
-                document.getElementById('studentDashboard').style.display = 'block';
-                document.getElementById('adminDashboard').style.display = 'none';
-                loadStudentData();
-            }
-        }
-
-        function showTab(tabId, element) {
-            // Hide all tab contents
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(tab => tab.classList.remove('active'));
-            
-            // Remove active class from all nav tabs
-            const navTabs = document.querySelectorAll('.nav-tab');
-            navTabs.forEach(tab => tab.classList.remove('active'));
-            
-            // Show selected tab
+        function showTab(tabId, event) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
             document.getElementById(tabId).classList.add('active');
-            
-            // Add active class to clicked nav tab
-            if (element) {
-                element.classList.add('active');
+            if (event) {
+                document.querySelectorAll('.nav-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                event.classList.add('active');
             }
         }
 
-        // Modal functions
         function showModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
         }
@@ -1181,210 +1372,210 @@
         }
 
         function clearModalInputs() {
-            const inputs = document.querySelectorAll('.modal input, .modal textarea, .modal select');
-            inputs.forEach(input => input.value = '');
+            const inputs = document.querySelectorAll('.modal input, .modal textarea');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+            const selects = document.querySelectorAll('.modal select');
+            selects.forEach(select => {
+                select.selectedIndex = 0;
+            });
         }
 
-        // Notification function
-        function showNotification(message, type) {
-            const notification = document.getElementById('notification');
-            notification.textContent = message;
-            notification.className = `notification ${type}`;
-            notification.style.display = 'block';
-            
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 4000);
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-IN', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
         }
 
-        // Admin functions
-        function loadAdminData() {
-            loadJobsList();
-            loadStudentsList();
-            loadGroupsList();
-            updateStatistics();
+        // Authentication Functions
+        function adminLogin() {
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+            if (username === 'admin' && password === 'admin123') {
+                currentUser = { type: 'admin' };
+                document.getElementById('homePage').style.display = 'none';
+                document.getElementById('adminDashboard').style.display = 'block';
+                loadStudentsList();
+                loadCompaniesList();
+                loadGroupsList();
+                updateStatistics();
+                showNotification('Admin login successful!', 'success');
+            } else {
+                showNotification('Invalid admin credentials!', 'error');
+            }
         }
 
-        function postJob() {
-            const company = document.getElementById('jobCompany').value.trim();
-            const title = document.getElementById('jobTitle').value.trim();
-            const description = document.getElementById('jobDescription').value.trim();
-            const startDate = document.getElementById('jobStartDate').value;
-            const endDate = document.getElementById('jobEndDate').value;
-            const link = document.getElementById('jobLink').value.trim();
+        function studentLogin() {
+            const rollNo = document.getElementById('studentRollNo').value.trim();
+            const password = document.getElementById('studentPassword').value.trim();
+            const student = students.find(s => s.rollNo === rollNo);
+            if (student && password === rollNo) {
+                currentUser = { type: 'student', data: student };
+                document.getElementById('homePage').style.display = 'none';
+                document.getElementById('studentDashboard').style.display = 'block';
+                loadStudentData();
+                loadStudentProfile();
+                showNotification(`Welcome, ${student.name}!`, 'success');
+            } else {
+                showNotification('Invalid roll number or password!', 'error');
+            }
+        }
 
-            // Validate all required fields
-            if (!company) {
-                showNotification('Company name is required!', 'error');
-                return;
-            }
-            if (!title) {
-                showNotification('Job title is required!', 'error');
-                return;
-            }
-            if (!description) {
-                showNotification('Job description is required!', 'error');
-                return;
-            }
-            if (!startDate) {
-                showNotification('Application start date is required!', 'error');
-                return;
-            }
-            if (!endDate) {
-                showNotification('Application end date is required!', 'error');
-                return;
-            }
-            if (!link) {
-                showNotification('Application link is required!', 'error');
-                return;
-            }
+        function logout() {
+            currentUser = null;
+            document.getElementById('adminDashboard').style.display = 'none';
+            document.getElementById('studentDashboard').style.display = 'none';
+            document.getElementById('homePage').style.display = 'block';
+            showNotification('Logged out successfully!', 'success');
+        }
 
-            // Validate dates
-            if (new Date(startDate) >= new Date(endDate)) {
+        // Admin Functions
+        function addCompany() {
+            const name = document.getElementById('companyName').value.trim();
+            const role = document.getElementById('companyRole').value.trim();
+            const packageVal = parseFloat(document.getElementById('companyPackage').value);
+            const description = document.getElementById('companyDescription').value.trim();
+            const startDate = document.getElementById('companyStartDate').value;
+            const endDate = document.getElementById('companyEndDate').value;
+            const link = document.getElementById('companyLink').value.trim();
+            if (!name || !role || !packageVal || !description || !startDate || !endDate || !link) {
+                showNotification('All fields are required!', 'error');
+                return;
+            }
+            if (new Date(startDate) > new Date(endDate)) {
                 showNotification('End date must be after start date!', 'error');
                 return;
             }
-
-            const job = {
+            companies.push({
                 id: Date.now(),
-                company,
-                title,
+                name,
+                role,
+                package: packageVal,
                 description,
                 startDate,
                 endDate,
                 link,
-                applicants: []
-            };
-
-            jobs.push(job);
-            hideModal('postJobModal');
-            loadJobsList();
-            updateStatistics();
-            showNotification('Job posted successfully!', 'success');
+                registeredStudents: []
+            });
+            hideModal('addCompanyModal');
+            loadCompaniesList();
+            showNotification('Company added successfully!', 'success');
         }
 
-        function loadJobsList() {
-            const jobsList = document.getElementById('jobsList');
-            const studentJobsList = document.getElementById('studentJobsList');
-            
-            if (jobs.length === 0) {
-                jobsList.innerHTML = `
+        function loadCompaniesList() {
+            const companiesList = document.getElementById('companiesList');
+            const studentCompaniesList = document.getElementById('studentCompaniesList');
+            const today = new Date();
+            const activeCompanies = companies.filter(c => new Date(c.endDate) >= today);
+            if (activeCompanies.length === 0) {
+                const emptyMessage = `
                     <div class="empty-state">
                         <i class="fas fa-briefcase"></i>
-                        <p>No jobs posted yet. Click "Post New Job" to get started.</p>
+                        <p>No active companies available.</p>
                     </div>
                 `;
-                if (studentJobsList) {
-                    studentJobsList.innerHTML = `
-                        <div class="empty-state">
-                            <i class="fas fa-search"></i>
-                            <p>No job opportunities available at the moment. Check back soon!</p>
-                        </div>
-                    `;
-                }
+                companiesList.innerHTML = emptyMessage;
+                if (studentCompaniesList) studentCompaniesList.innerHTML = emptyMessage;
                 return;
             }
-
-            const jobsHTML = jobs.map(job => `
+            const companiesHTML = activeCompanies.map(company => `
                 <div class="job-card">
-                    <h4>${job.company} - ${job.title}</h4>
-                    <p style="margin-bottom: 15px;">${job.description}</p>
-                    <p><strong>Application Period:</strong> ${formatDate(job.startDate)} to ${formatDate(job.endDate)}</p>
-                    <p><strong>Total Applicants:</strong> ${job.applicants.length} students</p>
+                    <h4>${company.name} - ${company.role}</h4>
+                    <p><strong>Package:</strong> ₹${company.package} LPA</p>
+                    <p><strong>Description:</strong> ${company.description}</p>
+                    <p><strong>Registration Period:</strong> ${formatDate(company.startDate)} - ${formatDate(company.endDate)}</p>
+                    <p><strong>Registered Students:</strong> ${company.registeredStudents.length}</p>
                     <div class="job-actions">
-                        <a href="${job.link}" target="_blank" class="btn btn-small">View Application Link</a>
-                        <button class="btn btn-small btn-danger" onclick="deleteJob(${job.id})">Delete Job</button>
+                        <a href="${company.link}" target="_blank" class="btn btn-small">Apply</a>
+                        <button class="btn btn-small btn-danger" onclick="deleteCompany(${company.id})">Delete</button>
                     </div>
                 </div>
             `).join('');
-
-            jobsList.innerHTML = jobsHTML;
-
-            // Load for students
-            if (studentJobsList) {
-                const activeJobs = jobs.filter(job => new Date(job.endDate) >= new Date());
-                if (activeJobs.length === 0) {
-                    studentJobsList.innerHTML = `
-                        <div class="empty-state">
-                            <i class="fas fa-clock"></i>
-                            <p>No active job openings right now. New opportunities will appear here.</p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                const studentJobsHTML = activeJobs.map(job => {
-                    const applied = currentUser && job.applicants.includes(currentUser.rollNo);
-                    const isExpired = new Date(job.endDate) < new Date();
-                    
+            companiesList.innerHTML = companiesHTML;
+            if (studentCompaniesList) {
+                const studentCompaniesHTML = activeCompanies.map(company => {
+                    const isRegistered = currentUser && currentUser.type === 'student' && currentUser.data.registeredCompanies.includes(company.id);
                     return `
                         <div class="job-card">
-                            <h4>${job.company} - ${job.title}</h4>
-                            <p style="margin-bottom: 15px;">${job.description}</p>
-                            <p><strong>Application Deadline:</strong> ${formatDate(job.endDate)}</p>
-                            <p><strong>Status:</strong> ${isExpired ? '<span style="color: #ef4444;">Expired</span>' : '<span style="color: #10b981;">Active</span>'}</p>
+                            <h4>${company.name} - ${company.role}</h4>
+                            <p><strong>Package:</strong> ₹${company.package} LPA</p>
+                            <p><strong>Description:</strong> ${company.description}</p>
+                            <p><strong>Registration Period:</strong> ${formatDate(company.startDate)} - ${formatDate(company.endDate)}</p>
                             <div class="job-actions">
-                                <a href="${job.link}" target="_blank" class="btn btn-small">Apply Now</a>
-                                ${!applied && !isExpired ? 
-                                    `<button class="btn btn-small btn-secondary" onclick="applyJob(${job.id})">Mark as Applied</button>` :
-                                    applied ? `<span class="skill-tag">Applied ✓</span>` : ''
+                                <a href="${company.link}" target="_blank" class="btn btn-small">Apply</a>
+                                ${isRegistered ?
+                                    '<span style="color: #10b981;">Registered ✓</span>' :
+                                    `<button class="btn btn-small btn-secondary" onclick="registerForCompany(${company.id})">Register</button>`
                                 }
                             </div>
                         </div>
                     `;
                 }).join('');
-                
-                studentJobsList.innerHTML = studentJobsHTML;
+                studentCompaniesList.innerHTML = studentCompaniesHTML;
             }
         }
 
-        function deleteJob(jobId) {
-            if (confirm('Are you sure you want to delete this job posting?')) {
-                jobs = jobs.filter(job => job.id !== jobId);
-                loadJobsList();
+        function deleteCompany(companyId) {
+            if (confirm('Are you sure you want to delete this company?')) {
+                companies = companies.filter(c => c.id !== companyId);
+                students.forEach(student => {
+                    student.registeredCompanies = student.registeredCompanies.filter(id => id !== companyId);
+                });
+                loadCompaniesList();
+                if (currentUser && currentUser.type === 'student') {
+                    loadRegistrationStatus();
+                }
                 updateStatistics();
-                showNotification('Job posting deleted successfully!', 'success');
+                showNotification('Company deleted successfully!', 'success');
             }
         }
 
-        function loadStudentsList() {
-            const studentsList = document.getElementById('studentsList');
-            const studentsHTML = students.map(student => `
-                <div class="student-card">
-                    <h4>${student.name} (${student.rollNo})</h4>
-                    <p><strong>Email:</strong> ${student.email}</p>
-                    <p><strong>Phone:</strong> ${student.phone}</p>
-                    <p><strong>Skills:</strong> ${student.skills.length > 0 ? student.skills.join(', ') : 'Not specified'}</p>
-                    <p><strong>Applied Jobs:</strong> ${student.appliedJobs.length} applications</p>
-                    <p><strong>Test Scores:</strong> ${student.testScores.length} tests completed</p>
-                    <div class="job-actions">
-                        ${student.resume ? 
-                            `<a href="${student.resume}" target="_blank" class="btn btn-small">View Resume</a>` :
-                            '<span style="color: #64748b; font-style: italic;">No resume uploaded</span>'
-                        }
-                    </div>
-                </div>
-            `).join('');
-            studentsList.innerHTML = studentsHTML;
+        function registerForCompany(companyId) {
+            if (!currentUser || currentUser.type !== 'student') {
+                showNotification('Please login as a student to register!', 'error');
+                return;
+            }
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            const company = companies.find(c => c.id === companyId);
+            if (!company) {
+                showNotification('Company not found!', 'error');
+                return;
+            }
+            if (new Date() < new Date(company.startDate) || new Date() > new Date(company.endDate)) {
+                showNotification('Registration period has closed!', 'error');
+                return;
+            }
+            if (!students[studentIndex].registeredCompanies.includes(companyId)) {
+                students[studentIndex].registeredCompanies.push(companyId);
+                company.registeredStudents.push(student.rollNo);
+                loadCompaniesList();
+                loadRegistrationStatus();
+                updateStatistics();
+                showNotification(`Successfully registered for ${company.name}!`, 'success');
+            } else {
+                showNotification('You are already registered for this company!', 'error');
+            }
         }
 
         function addGroup() {
             const name = document.getElementById('groupName').value.trim();
             const link = document.getElementById('groupLink').value.trim();
             const description = document.getElementById('groupDescription').value.trim();
-
             if (!name || !link) {
                 showNotification('Group name and WhatsApp link are required!', 'error');
                 return;
             }
-
             const group = {
                 id: Date.now(),
                 name,
                 link,
                 description: description || 'No description provided'
             };
-
             groups.push(group);
             hideModal('addGroupModal');
             loadGroupsList();
@@ -1394,7 +1585,6 @@
         function loadGroupsList() {
             const groupsList = document.getElementById('groupsList');
             const studentGroupsList = document.getElementById('studentGroupsList');
-            
             if (groups.length === 0) {
                 const emptyMessage = `
                     <div class="empty-state">
@@ -1406,32 +1596,18 @@
                 if (studentGroupsList) studentGroupsList.innerHTML = emptyMessage;
                 return;
             }
-
             const groupsHTML = groups.map(group => `
                 <div class="job-card">
                     <h4><i class="fab fa-whatsapp" style="color: #25d366;"></i> ${group.name}</h4>
                     <p>${group.description}</p>
                     <div class="job-actions">
                         <a href="${group.link}" target="_blank" class="btn btn-small">Join Group</a>
-                        <button class="btn btn-small btn-danger" onclick="deleteGroup(${group.id})">Delete Group</button>
+                        ${currentUser && currentUser.type === 'admin' ? `<button class="btn btn-small btn-danger" onclick="deleteGroup(${group.id})">Delete Group</button>` : ''}
                     </div>
                 </div>
             `).join('');
-
             groupsList.innerHTML = groupsHTML;
-            
-            if (studentGroupsList) {
-                const studentGroupsHTML = groups.map(group => `
-                    <div class="job-card">
-                        <h4><i class="fab fa-whatsapp" style="color: #25d366;"></i> ${group.name}</h4>
-                        <p>${group.description}</p>
-                        <div class="job-actions">
-                            <a href="${group.link}" target="_blank" class="btn btn-small">Join Group</a>
-                        </div>
-                    </div>
-                `).join('');
-                studentGroupsList.innerHTML = studentGroupsHTML;
-            }
+            if (studentGroupsList) studentGroupsList.innerHTML = groupsHTML;
         }
 
         function deleteGroup(groupId) {
@@ -1442,309 +1618,652 @@
             }
         }
 
+        function toggleEmailInputs() {
+            const emailType = document.getElementById('emailType').value;
+            const individualSection = document.getElementById('individualEmailSection');
+            if (emailType === 'individual') {
+                individualSection.style.display = 'block';
+                loadStudentSelector();
+            } else {
+                individualSection.style.display = 'none';
+            }
+        }
+
+        function loadStudentSelector() {
+            const select = document.getElementById('selectedStudent');
+            if (!select) return;
+            select.innerHTML = '<option value="">Select a student</option>';
+            students.forEach(student => {
+                select.innerHTML += `<option value="${student.rollNo}">${student.name} (${student.rollNo})</option>`;
+            });
+        }
+
         function sendNotification() {
+            const emailType = document.getElementById('emailType').value;
             const subject = document.getElementById('emailSubject').value.trim();
             const message = document.getElementById('emailMessage').value.trim();
-
             if (!subject || !message) {
                 showNotification('Please fill in both subject and message!', 'error');
                 return;
             }
-
-            // Simulate sending email
-            showNotification(`Email notification sent to all ${students.length} students successfully!`, 'success');
+            if (emailType === 'individual') {
+                const selectedStudent = document.getElementById('selectedStudent').value;
+                if (!selectedStudent) {
+                    showNotification('Please select a student!', 'error');
+                    return;
+                }
+                const student = students.find(s => s.rollNo === selectedStudent);
+                showNotification(`Email sent to ${student.name} successfully!`, 'success');
+            } else {
+                showNotification(`Email sent to all ${students.length} students successfully!`, 'success');
+            }
             document.getElementById('emailSubject').value = '';
             document.getElementById('emailMessage').value = '';
         }
 
-        function updateStatistics() {
-            const totalStudents = students.length;
-            const appliedStudents = students.filter(s => s.appliedJobs.length > 0).length;
-            const notAppliedStudents = totalStudents - appliedStudents;
-            const totalJobs = jobs.filter(job => new Date(job.endDate) >= new Date()).length;
-
-            document.getElementById('totalStudents').textContent = totalStudents;
-            document.getElementById('appliedStudents').textContent = appliedStudents;
-            document.getElementById('notAppliedStudents').textContent = notAppliedStudents;
-            document.getElementById('totalJobs').textContent = totalJobs;
+        function sendIndividualEmail() {
+            const subject = document.getElementById('individualEmailSubject').value.trim();
+            const message = document.getElementById('individualEmailMessage').value.trim();
+            if (!subject || !message || !currentEmailStudent) {
+                showNotification('Please fill in all fields!', 'error');
+                return;
+            }
+            const student = students.find(s => s.rollNo === currentEmailStudent);
+            showNotification(`Email sent to ${student.name} successfully!`, 'success');
+            hideModal('sendEmailModal');
         }
 
-        // Student functions
+        function sendEmailToIndividualStudent(rollNo) {
+            currentEmailStudent = rollNo;
+            const student = students.find(s => s.rollNo === rollNo);
+            document.getElementById('individualEmailSubject').value = `Important Notice from Placement Cell`;
+            document.getElementById('individualEmailMessage').value = `Dear ${student.name},\n\nThis is an important message from the Placement Cell.\n\nBest regards,\nPlacement Cell`;
+            showModal('sendEmailModal');
+        }
+
+        function updateStatistics() {
+            const totalStudents = students.length;
+            const registeredStudents = students.filter(s => s.registeredCompanies.length > 0).length;
+            const notRegisteredStudents = totalStudents - registeredStudents;
+            const totalCompanies = companies.filter(company => new Date(company.endDate) >= new Date()).length;
+            document.getElementById('totalStudents').textContent = totalStudents;
+            document.getElementById('registeredStudents').textContent = registeredStudents;
+            document.getElementById('notRegisteredStudents').textContent = notRegisteredStudents;
+            document.getElementById('totalCompanies').textContent = totalCompanies;
+        }
+
+        // Student Functions
         function loadStudentData() {
-            loadJobsList();
+            loadCompaniesList();
             loadGroupsList();
-            loadHRQuestions();
+            loadStudentProjects();
+            loadStudentSkills();
+            loadRegistrationStatus();
+            loadHRandTechnicalQuestions();
             loadTestScores();
+        }
+
+        function handleResumeUpload(input) {
+            if (input.files && input.files[0]) {
+                const file = input.files[0];
+                const maxSize = 5 * 1024 * 1024; // 5MB
+                if (file.size > maxSize) {
+                    showNotification('File size should be less than 5MB!', 'error');
+                    input.value = '';
+                    return;
+                }
+                const student = currentUser.data;
+                const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+                students[studentIndex].resume = `https://drive.google.com/resume-${student.rollNo}`;
+                updateResumeStatus();
+                showNotification('Resume uploaded successfully!', 'success');
+            }
+        }
+
+        function updateResumeStatus() {
+            const student = currentUser.data;
+            const resumeStatus = document.getElementById('resumeStatus');
+            if (student.resume) {
+                resumeStatus.innerHTML = `
+                    <div style="margin-top: 10px; color: #10b981;">
+                        <i class="fas fa-check-circle"></i> Resume uploaded successfully
+                        <br><a href="${student.resume}" target="_blank" style="color: #f59e0b;">View Resume</a>
+                    </div>
+                `;
+            } else {
+                resumeStatus.innerHTML = '';
+            }
+        }
+
+        function updateProfile() {
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            const name = document.getElementById('profileName').value.trim();
+            const email = document.getElementById('profileEmail').value.trim();
+            const phone = document.getElementById('profilePhone').value.trim();
+            if (!name || !email || !phone) {
+                showNotification('Please fill all required fields!', 'error');
+                return;
+            }
+            students[studentIndex].name = name;
+            students[studentIndex].email = email;
+            students[studentIndex].phone = phone;
+            showNotification('Profile updated successfully!', 'success');
+        }
+
+        function loadRegistrationStatus() {
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            const registrationStatus = document.getElementById('registrationStatus');
+            if (student.registeredCompanies.length === 0) {
+                registrationStatus.innerHTML = `
+                    <div class="empty-state">                        <i class="fas fa-clipboard-list"></i>
+                        <p>No company registrations yet.</p>
+                    </div>
+                `;
+                return;
+            }
+            const statusHTML = student.registeredCompanies.map(companyId => {
+                const company = companies.find(c => c.id === companyId);
+                if (!company) return '';
+                return `
+                    <div class="project-card">
+                        <h5>${company.name}</h5>
+                        <p><strong>Role:</strong> ${company.role}</p>
+                        <p><strong>Package:</strong> ₹${company.package} LPA</p>
+                        <p><strong>Status:</strong> <span style="color: #10b981;">Registered ✓</span></p>
+                    </div>
+                `;
+            }).join('');
+            registrationStatus.innerHTML = statusHTML;
+        }
+
+        // Test Functions
+        function startTest(testType) {
+            if (!currentUser || currentUser.type !== 'student') {
+                showNotification('Please login as a student to take tests!', 'error');
+                return;
+            }
+            currentTest = testType;
+            currentQuestionIndex = 0;
+            userAnswers = [];
+            const questions = testType === 'aptitude' ? aptitudeQuestions : reasoningQuestions;
+            if (questions.length === 0) {
+                showNotification('No questions available for this test!', 'error');
+                return;
+            }
+            showQuestion(0, questions);
+        }
+
+        function showQuestion(index, questions) {
+            const testArea = document.getElementById('testArea');
+            const currentQuestion = questions[index];
+            const progress = ((index + 1) / questions.length) * 100;
+            let optionsHTML = '';
+            currentQuestion.options.forEach((option, i) => {
+                const selected = userAnswers[index] === i ? 'selected' : '';
+                optionsHTML += `
+                    <div class="test-option ${selected}" onclick="selectOption(${index}, ${i})">
+                        ${option}
+                    </div>
+                `;
+            });
+            testArea.innerHTML = `
+                <div class="test-card">
+                    <div class="test-progress">
+                        <div class="test-progress-bar" style="width: ${progress}%"></div>
+                    </div>
+                    <div class="test-question">
+                        <strong>Question ${index + 1} of ${questions.length}</strong><br><br>
+                        ${currentQuestion.question}
+                    </div>
+                    <div class="test-options">
+                        ${optionsHTML}
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        ${index > 0 ? `<button class="btn btn-small" onclick="previousQuestion(${index}, ${JSON.stringify(questions).replace(/"/g, "'")})">Previous</button>` : ''}
+                        ${index < questions.length - 1 ?
+                            `<button class="btn btn-small btn-secondary" onclick="nextQuestion(${index}, ${JSON.stringify(questions).replace(/"/g, "'")})">Next</button>` :
+                            `<button class="btn btn-small" onclick="submitTest(${JSON.stringify(questions).replace(/"/g, "'")})">Submit Test</button>`
+                        }
+                    </div>
+                </div>
+            `;
+        }
+
+        function selectOption(questionIndex, optionIndex) {
+            userAnswers[questionIndex] = optionIndex;
+            document.querySelectorAll('.test-option').forEach((option, i) => {
+                option.classList.remove('selected');
+                if (i === optionIndex) {
+                    option.classList.add('selected');
+                }
+            });
+        }
+
+        function nextQuestion(index, questionsString) {
+            const questions = JSON.parse(questionsString.replace(/'/g, '"'));
+            if (index < questions.length - 1) {
+                showQuestion(index + 1, questions);
+            }
+        }
+
+        function previousQuestion(index, questionsString) {
+            const questions = JSON.parse(questionsString.replace(/'/g, '"'));
+            if (index > 0) {
+                showQuestion(index - 1, questions);
+            }
+        }
+
+        function submitTest(questionsString) {
+            const parsedQuestions = JSON.parse(questionsString.replace(/'/g, '"'));
+            let score = 0;
+            let correctAnswers = 0;
+            parsedQuestions.forEach((q, i) => {
+                if (userAnswers[i] === q.correct) {
+                    score += 20;
+                    correctAnswers++;
+                }
+            });
+            const percentage = (correctAnswers / parsedQuestions.length) * 100;
+            const testName = currentTest.charAt(0).toUpperCase() + currentTest.slice(1);
+            const testDate = new Date().toLocaleDateString('en-IN');
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            if (!students[studentIndex].testScores) {
+                students[studentIndex].testScores = [];
+            }
+            students[studentIndex].testScores.push({
+                testType: currentTest,
+                score: score,
+                percentage: percentage.toFixed(1),
+                date: testDate,
+                correct: correctAnswers,
+                total: parsedQuestions.length
+            });
+            const testArea = document.getElementById('testArea');
+            testArea.innerHTML = `
+                <div class="test-card">
+                    <h4 style="text-align: center; color: ${percentage >= 70 ? '#10b981' : percentage >= 50 ? '#f59e0b' : '#ef4444'}">
+                        <i class="fas fa-${percentage >= 70 ? 'award' : percentage >= 50 ? 'star' : 'exclamation-triangle'}"></i>
+                        Test Completed!
+                    </h4>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <h3>${testName} Test Results</h3>
+                        <p><strong>Score:</strong> ${score}/100 (${percentage}%)</p>
+                        <p><strong>Correct Answers:</strong> ${correctAnswers}/${parsedQuestions.length}</p>
+                        <p><strong>Date:</strong> ${testDate}</p>
+                        ${percentage >= 70 ? '<p style="color: #10b981;">Excellent! You\'re well-prepared for placements.</p>' :
+                         percentage >= 50 ? '<p style="color: #f59e0b;">Good job! Consider practicing more for better results.</p>' :
+                         '<p style="color: #ef4444;">Keep practicing! You can improve with more preparation.</p>'}
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="btn" onclick="loadTestScores()">View All Scores</button>
+                        <button class="btn btn-secondary" onclick="startTest('${currentTest}')">Retake Test</button>
+                    </div>
+                </div>
+            `;
+            showNotification(`${testName} test completed! Score: ${percentage}%`, percentage >= 70 ? 'success' : 'error');
+            if (document.getElementById('testScores')) {
+                loadTestScoresProfile();
+            }
+        }
+
+        function loadTestScores() {
+            const testScoresList = document.getElementById('testScoresList');
+            if (!currentUser || currentUser.type !== 'student') {
+                testScoresList.innerHTML = '<div class="empty-state"><p>Please login to view test scores.</p></div>';
+                return;
+            }
+            const student = currentUser.data;
+            if (!student.testScores || student.testScores.length === 0) {
+                testScoresList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-clipboard-list"></i>
+                        <p>No test scores available. Take a practice test to get started!</p>
+                    </div>
+                `;
+                return;
+            }
+            const scoresByType = {};
+            student.testScores.forEach(score => {
+                if (!scoresByType[score.testType]) {
+                    scoresByType[score.testType] = [];
+                }
+                scoresByType[score.testType].push(score);
+            });
+            let scoresHTML = '';
+            Object.keys(scoresByType).forEach(testType => {
+                const testScores = scoresByType[testType];
+                const latestScore = testScores[testScores.length - 1];
+                const testName = testType.charAt(0).toUpperCase() + testType.slice(1);
+                scoresHTML += `
+                    <div class="test-card">
+                        <h4><i class="fas fa-${testType === 'aptitude' ? 'calculator' : 'brain'}"></i> ${testName} Test</h4>
+                        <p><strong>Latest Score:</strong> ${latestScore.score}/100 (${latestScore.percentage}%)</p>
+                        <p><strong>Date:</strong> ${latestScore.date}</p>
+                        <p><strong>Best Score:</strong> ${Math.max(...testScores.map(s => s.score))}/100</p>
+                        <div style="margin-top: 15px;">
+                            <h5>Recent Attempts:</h5>
+                            ${testScores.slice(-3).map(score => `
+                                <div style="display: flex; justify-content: space-between; padding: 8px; background: #0f172a; border-radius: 6px; margin: 5px 0;">
+                                    <span>${score.date}</span>
+                                    <span style="color: ${score.percentage >= 70 ? '#10b981' : score.percentage >= 50 ? '#f59e0b' : '#ef4444'}">
+                                        ${score.percentage}%
+                                    </span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div style="margin-top: 15px; text-align: center;">
+                            <button class="btn btn-small" onclick="startTest('${testType}')">Take Test Again</button>
+                        </div>
+                    </div>
+                `;
+            });
+            testScoresList.innerHTML = scoresHTML;
+        }
+
+        function loadTestScoresProfile() {
+            const testScoresDiv = document.getElementById('testScores');
+            if (!currentUser || currentUser.type !== 'student') {
+                testScoresDiv.innerHTML = '<p style="color: #64748b;">Please login to view test scores.</p>';
+                return;
+            }
+            const student = currentUser.data;
+            if (!student.testScores || student.testScores.length === 0) {
+                testScoresDiv.innerHTML = `
+                    <div class="empty-state" style="padding: 20px;">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; margin-bottom: 10px; color: #475569;"></i>
+                        <p>No test scores available yet.</p>
+                        <p style="font-size: 0.9rem;">Take practice tests to track your progress!</p>
+                    </div>
+                `;
+                return;
+            }
+            const aptitudeScores = student.testScores.filter(s => s.testType === 'aptitude');
+            const reasoningScores = student.testScores.filter(s => s.testType === 'reasoning');
+            let profileScoresHTML = `
+                <div style="display: grid; gap: 15px;">
+                    ${aptitudeScores.length > 0 ? `
+                        <div style="background: #0f172a; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                            <h5 style="color: #f59e0b; margin-bottom: 10px;"><i class="fas fa-calculator"></i> Aptitude Test</h5>
+                            <p><strong>Best Score:</strong> ${Math.max(...aptitudeScores.map(s => s.score))}/100</p>
+                            <p><strong>Average:</strong> ${Math.round(aptitudeScores.reduce((sum, s) => sum + s.score, 0) / aptitudeScores.length)}/100</p>
+                            <p><strong>Attempts:</strong> ${aptitudeScores.length}</p>
+                        </div>
+                    ` : ''}
+                    ${reasoningScores.length > 0 ? `
+                        <div style="background: #0f172a; padding: 15px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+                            <h5 style="color: #8b5cf6; margin-bottom: 10px;"><i class="fas fa-brain"></i> Reasoning Test</h5>
+                            <p><strong>Best Score:</strong> ${Math.max(...reasoningScores.map(s => s.score))}/100</p>
+                            <p><strong>Average:</strong> ${Math.round(reasoningScores.reduce((sum, s) => sum + s.score, 0) / reasoningScores.length)}/100</p>
+                            <p><strong>Attempts:</strong> ${reasoningScores.length}</p>
+                        </div>
+                    ` : ''}
+                </div>
+                <div style="margin-top: 20px; text-align: center;">
+                    <button class="btn btn-small" onclick="showTab('student-tests', null)">View Detailed Scores</button>
+                </div>
+            `;
+            testScoresDiv.innerHTML = profileScoresHTML;
         }
 
         function loadStudentProfile() {
             if (!currentUser || currentUser.type !== 'student') return;
-
             const student = currentUser.data;
             document.getElementById('profileRollNo').value = student.rollNo;
             document.getElementById('profileName').value = student.name;
             document.getElementById('profileEmail').value = student.email;
             document.getElementById('profilePhone').value = student.phone;
-            document.getElementById('profileSkills').value = student.skills.join(', ');
-            document.getElementById('profileProjects').value = student.projects;
-            document.getElementById('profileResume').value = student.resume;
-            
-            updateSkillsDisplay();
+            updateResumeStatus();
+            loadTestScoresProfile();
+            loadRegistrationStatus();
         }
 
-        function updateProfile() {
-            if (!currentUser || currentUser.type !== 'student') return;
-
-            const student = currentUser.data;
-            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
-
-            const name = document.getElementById('profileName').value.trim();
-            const email = document.getElementById('profileEmail').value.trim();
-            const phone = document.getElementById('profilePhone').value.trim();
-
-            if (!name || !email || !phone) {
-                showNotification('Please fill all required fields!', 'error');
-                return;
-            }
-
-            students[studentIndex].name = name;
-            students[studentIndex].email = email;
-            students[studentIndex].phone = phone;
-
-            showNotification('Profile updated successfully!', 'success');
-        }
-
-        function updateSkillsProjects() {
-            if (!currentUser || currentUser.type !== 'student') return;
-
-            const student = currentUser.data;
-            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
-
-            const skillsText = document.getElementById('profileSkills').value.trim();
-            const projects = document.getElementById('profileProjects').value.trim();
-            const resume = document.getElementById('profileResume').value.trim();
-
-            students[studentIndex].skills = skillsText ? skillsText.split(',').map(s => s.trim()).filter(s => s) : [];
-            students[studentIndex].projects = projects;
-            students[studentIndex].resume = resume;
-
-            updateSkillsDisplay();
-            showNotification('Skills and projects updated successfully!', 'success');
-        }
-
-        function updateSkillsDisplay() {
-            if (!currentUser || currentUser.type !== 'student') return;
-
-            const student = currentUser.data;
-            const skillsDisplay = document.getElementById('skillsDisplay');
-            
-            if (student.skills.length === 0) {
-                skillsDisplay.innerHTML = '<p style="color: #64748b; font-style: italic;">No skills added yet</p>';
-                return;
-            }
-
-            const skillsHTML = student.skills.map(skill => 
-                `<span class="skill-tag">${skill}</span>`
-            ).join('');
-            
-            skillsDisplay.innerHTML = skillsHTML;
-        }
-
-        function applyJob(jobId) {
-            if (!currentUser || currentUser.type !== 'student') return;
-
-            const job = jobs.find(j => j.id === jobId);
-            const student = currentUser.data;
-            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
-
-            if (!job.applicants.includes(student.rollNo)) {
-                job.applicants.push(student.rollNo);
-                students[studentIndex].appliedJobs.push(jobId);
-                
-                loadJobsList();
-                updateStatistics();
-                showNotification('Successfully marked as applied!', 'success');
-            }
-        }
-
-        // Test functions
-        function startTest(testType) {
-            if (testType === 'aptitude') {
-                currentTest = 'aptitude';
-                currentQuestionIndex = 0;
-                testAnswers = [];
-                showTestQuestion();
-            }
-        }
-
-        function showTestQuestion() {
-            if (currentQuestionIndex >= aptitudeQuestions.length) {
-                finishTest();
-                return;
-            }
-
-            const question = aptitudeQuestions[currentQuestionIndex];
-            const progress = ((currentQuestionIndex) / aptitudeQuestions.length) * 100;
-
-            const testHTML = `
-                <div class="test-card">
-                    <div class="test-progress">
-                        <div class="test-progress-bar" style="width: ${progress}%"></div>
-                    </div>
-                    <p><strong>Question ${currentQuestionIndex + 1} of ${aptitudeQuestions.length}</strong></p>
-                    <div class="test-question">${question.question}</div>
-                    <div class="test-options">
-                        ${question.options.map((option, index) => `
-                            <div class="test-option" onclick="selectOption(${index})" id="option-${index}">
-                                ${String.fromCharCode(65 + index)}. ${option}
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <button class="btn btn-small" onclick="submitAnswer()" id="submitBtn" disabled>Submit Answer</button>
-                        ${currentQuestionIndex > 0 ? '<button class="btn btn-small" onclick="previousQuestion()" style="margin-left: 10px;">Previous</button>' : ''}
-                    </div>
-                </div>
-            `;
-
-            document.getElementById('testArea').innerHTML = testHTML;
-        }
-
-        function selectOption(optionIndex) {
-            // Clear previous selections
-            document.querySelectorAll('.test-option').forEach(opt => opt.classList.remove('selected'));
-            
-            // Select current option
-            document.getElementById(`option-${optionIndex}`).classList.add('selected');
-            testAnswers[currentQuestionIndex] = optionIndex;
-            
-            // Enable submit button
-            document.getElementById('submitBtn').disabled = false;
-        }
-
-        function submitAnswer() {
-            currentQuestionIndex++;
-            showTestQuestion();
-        }
-
-        function previousQuestion() {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                showTestQuestion();
-            }
-        }
-
-        function finishTest() {
-            let correctAnswers = 0;
-            testAnswers.forEach((answer, index) => {
-                if (answer === aptitudeQuestions[index].correct) {
-                    correctAnswers++;
-                }
-            });
-
-            const score = Math.round((correctAnswers / aptitudeQuestions.length) * 100);
-            
-            // Save test score
-            if (currentUser && currentUser.type === 'student') {
-                const student = currentUser.data;
-                const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
-                
-                students[studentIndex].testScores.push({
-                    id: Date.now(),
-                    type: 'aptitude',
-                    company: 'Practice Test',
-                    score: `${score}% (${correctAnswers}/${aptitudeQuestions.length})`,
-                    date: new Date().toISOString().split('T')[0]
-                });
-                
-                loadTestScores();
-            }
-
-            const resultHTML = `
-                <div class="test-card">
-                    <div style="text-align: center;">
-                        <h4 style="color: #f59e0b; margin-bottom: 20px;">Test Completed!</h4>
-                        <div class="stat-card" style="max-width: 300px; margin: 0 auto;">
-                            <span class="stat-number">${score}%</span>
-                            <span class="stat-label">Your Score</span>
+        // HR & Technical Questions
+        function loadHRandTechnicalQuestions() {
+            const hrQuestionsList = document.getElementById('hrQuestionsList');
+            const technicalQuestionsList = document.getElementById('technicalQuestionsList');
+            if (hrQuestions.length === 0) {
+                hrQuestionsList.innerHTML = '<div class="empty-state"><p>No HR questions available.</p></div>';
+            } else {
+                const hrHTML = hrQuestions.map(q => `
+                    <div class="hr-question-card">
+                        <h5><i class="fas fa-user-tie"></i> ${q.company}</h5>
+                        <p style="margin-bottom: 10px;">${q.question}</p>
+                        <div style="color: #94a3b8; font-size: 0.9rem;">
+                            <i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Practice answering this question in 2-3 minutes with specific examples from your experience.
                         </div>
-                        <p style="margin: 20px 0;">You answered ${correctAnswers} out of ${aptitudeQuestions.length} questions correctly.</p>
-                        <button class="btn btn-small" onclick="startTest('aptitude')">Retake Test</button>
                     </div>
-                </div>
-            `;
-
-            document.getElementById('testArea').innerHTML = resultHTML;
-            showNotification(`Test completed! Your score: ${score}%`, 'success');
+                `).join('');
+                hrQuestionsList.innerHTML = hrHTML;
+            }
+            if (technicalQuestions.length === 0) {
+                technicalQuestionsList.innerHTML = '<div class="empty-state"><p>No technical questions available.</p></div>';
+            } else {
+                const techHTML = technicalQuestions.map(q => `
+                    <div class="technical-question-card">
+                        <h5><i class="fas fa-code"></i> ${q.company}</h5>
+                        <p style="margin-bottom: 10px;"><strong>Problem:</strong> ${q.question}</p>
+                        <div style="color: #94a3b8; font-size: 0.9rem;">
+                            <i class="fas fa-clock"></i> <strong>Time:</strong> 30-45 minutes |
+                            <i class="fas fa-brain"></i> <strong>Difficulty:</strong> Medium
+                        </div>
+                        <div style="margin-top: 10px; padding: 10px; background: #0f172a; border-radius: 6px; font-family: monospace; font-size: 0.85rem; color: #cbd5e1;">
+                            <strong>Sample Approach:</strong><br>
+                            • Understand the problem requirements<br>
+                            • Choose appropriate data structures<br>
+                            • Write clean, well-commented code<br>
+                            • Test with edge cases
+                        </div>
+                    </div>
+                `).join('');
+                technicalQuestionsList.innerHTML = techHTML;
+            }
         }
 
-        function loadTestScores() {
+        // Project Management
+        function loadStudentProjects() {
             if (!currentUser || currentUser.type !== 'student') return;
-
             const student = currentUser.data;
-            const testScoresList = document.getElementById('testScoresList');
-
-            if (student.testScores.length === 0) {
-                testScoresList.innerHTML = `
+            const projectsList = document.getElementById('projectsList');
+            if (student.projects.length === 0) {
+                projectsList.innerHTML = `
                     <div class="empty-state">
-                        <i class="fas fa-chart-line"></i>
-                        <p>No test scores recorded yet. Take a practice test to get started!</p>
+                        <i class="fas fa-code"></i>
+                        <p>No projects added yet. Click "Add New Project" to get started.</p>
                     </div>
                 `;
                 return;
             }
-
-            const scoresHTML = student.testScores.map(score => `
-                <div class="job-card">
-                    <h4>${score.company} - ${score.type === 'aptitude' ? 'Aptitude Test' : 'Technical Test'}</h4>
-                    <p><strong>Score:</strong> ${score.score}</p>
-                    <p><strong>Date:</strong> ${formatDate(score.date)}</p>
+            const projectsHTML = student.projects.map(project => `
+                <div class="project-card">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                        <h5>${project.title}</h5>
+                        <button class="btn btn-small btn-danger" onclick="deleteProject(${project.id})" style="width: auto; min-width: 60px; padding: 5px 10px;">Delete</button>
+                    </div>
+                    <p style="margin-bottom: 10px;">${project.description}</p>
+                    ${project.technologies ? `<p><strong>Technologies:</strong> ${project.technologies}</p>` : ''}
+                    <div class="job-actions" style="margin-top: 15px;">
+                        ${project.link ? `<a href="${project.link}" target="_blank" class="btn btn-small">View Project</a>` : ''}
+                        ${project.pptLink ? `<a href="${project.pptLink}" target="_blank" class="btn btn-small btn-secondary">View PPT</a>` : ''}
+                        ${project.reportLink ? `<a href="${project.reportLink}" target="_blank" class="btn btn-small" style="background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);">View Report</a>` : ''}
+                    </div>
                 </div>
             `).join('');
-
-            testScoresList.innerHTML = scoresHTML;
+            projectsList.innerHTML = projectsHTML;
         }
 
-        function loadHRQuestions() {
-            const hrQuestionsList = document.getElementById('hrQuestionsList');
-            
-            // Group questions by company
-            const questionsByCompany = {};
-            hrQuestions.forEach(q => {
-                if (!questionsByCompany[q.company]) {
-                    questionsByCompany[q.company] = [];
-                }
-                questionsByCompany[q.company].push(q.question);
-            });
+        function addProject() {
+            const title = document.getElementById('projectTitle').value.trim();
+            const description = document.getElementById('projectDescription').value.trim();
+            const link = document.getElementById('projectLink').value.trim();
+            const pptLink = document.getElementById('projectPPT').value.trim();
+            const reportLink = document.getElementById('projectReport').value.trim();
+            const technologies = document.getElementById('projectTechnologies').value.trim();
+            if (!title || !description) {
+                showNotification('Project title and description are required!', 'error');
+                return;
+            }
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            const project = {
+                id: Date.now(),
+                title,
+                description,
+                link: link || '',
+                pptLink: pptLink || '',
+                reportLink: reportLink || '',
+                technologies: technologies || ''
+            };
+            students[studentIndex].projects.push(project);
+            hideModal('addProjectModal');
+            loadStudentProjects();
+            showNotification('Project added successfully!', 'success');
+        }
 
-            let questionsHTML = '';
-            Object.keys(questionsByCompany).forEach(company => {
-                questionsHTML += `
-                    <div class="test-card">
-                        <h4 style="color: #f59e0b; margin-bottom: 15px;">${company}</h4>
-                        ${questionsByCompany[company].map(question => `
-                            <div class="question-item">
-                                <strong>Q:</strong> ${question}
+        function deleteProject(projectId) {
+            if (!confirm('Are you sure you want to delete this project?')) return;
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            students[studentIndex].projects = students[studentIndex].projects.filter(p => p.id !== projectId);
+            loadStudentProjects();
+            showNotification('Project deleted successfully!', 'success');
+        }
+
+            // Skills Management
+        function loadSkillSelector() {
+            const skillSelector = document.getElementById('skillSelector');
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            let selectorHTML = '';
+            Object.keys(skillCategories).forEach(category => {
+                selectorHTML += `
+                    <div class="skill-category">
+                        <h5>${category}</h5>
+                `;
+                skillCategories[category].forEach(skill => {
+                    const existingSkill = student.skills.find(s => s.name === skill);
+                    const isChecked = existingSkill ? 'checked' : '';
+                    const currentLevel = existingSkill ? existingSkill.level : 'beginner';
+                    selectorHTML += `
+                        <div class="skill-item">
+                            <div style="display: flex; align-items: center;">
+                                <input type="checkbox" class="skill-checkbox" ${isChecked} data-skill="${skill}" data-category="${category.toLowerCase()}">
+                                <span>${skill}</span>
                             </div>
-                        `).join('')}
+                            <select class="skill-level-select" data-skill="${skill}">
+                                <option value="beginner" ${currentLevel === 'beginner' ? 'selected' : ''}>Beginner</option>
+                                <option value="intermediate" ${currentLevel === 'intermediate' ? 'selected' : ''}>Intermediate</option>
+                                <option value="advanced" ${currentLevel === 'advanced' ? 'selected' : ''}>Advanced</option>
+                            </select>
+                        </div>
+                    `;
+                });
+                selectorHTML += '</div>';
+            });
+            skillSelector.innerHTML = selectorHTML;
+        }
+
+        function updateSkills() {
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            const studentIndex = students.findIndex(s => s.rollNo === student.rollNo);
+            const skillCheckboxes = document.querySelectorAll('.skill-checkbox:checked');
+            const newSkills = [];
+            skillCheckboxes.forEach(checkbox => {
+                const skillName = checkbox.getAttribute('data-skill');
+                const category = checkbox.getAttribute('data-category');
+                const levelSelect = document.querySelector(`select[data-skill="${skillName}"]`);
+                const level = levelSelect ? levelSelect.value : 'beginner';
+                newSkills.push({
+                    name: skillName,
+                    level: level,
+                    category: category
+                });
+            });
+            students[studentIndex].skills = newSkills;
+            hideModal('addSkillModal');
+            loadStudentSkills();
+            showNotification('Skills updated successfully!', 'success');
+        }
+
+        function loadStudentSkills() {
+            if (!currentUser || currentUser.type !== 'student') return;
+            const student = currentUser.data;
+            const skillsList = document.getElementById('skillsList');
+            if (student.skills.length === 0) {
+                skillsList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-cogs"></i>
+                        <p>No skills added yet. Click "Add/Update Skills" to get started.</p>
                     </div>
                 `;
+                return;
+            }
+            const skillsByCategory = {};
+            student.skills.forEach(skill => {
+                if (!skillsByCategory[skill.category]) {
+                    skillsByCategory[skill.category] = [];
+                }
+                skillsByCategory[skill.category].push(skill);
             });
-
-            hrQuestionsList.innerHTML = questionsHTML;
+            let skillsHTML = '';
+            Object.keys(skillsByCategory).forEach(category => {
+                skillsHTML += `
+                    <div class="skill-category" style="margin-bottom: 20px;">
+                        <h5 style="text-transform: capitalize;">${category}</h5>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                `;
+                skillsByCategory[category].forEach(skill => {
+                    skillsHTML += `
+                        <div class="skill-tag">
+                            ${skill.name}
+                            <span class="skill-level-badge level-${skill.level}">${skill.level}</span>
+                        </div>
+                    `;
+                });
+                skillsHTML += '</div></div>';
+            });
+            skillsList.innerHTML = skillsHTML;
+        }
+        const skillCategories = {
+    Programming: ['Java', 'Python', 'C++', 'JavaScript', 'C#', 'PHP', 'Ruby', 'Go'],
+    Frontend: ['React', 'Angular', 'Vue.js', 'HTML', 'CSS', 'TypeScript', 'Bootstrap', 'Tailwind CSS'],
+    Backend: ['Node.js', 'Django', 'Flask', 'Spring Boot', 'Express.js', 'Ruby on Rails', 'ASP.NET'],
+    Database: ['MySQL', 'MongoDB', 'PostgreSQL', 'Oracle', 'SQLite', 'Redis', 'Cassandra'],
+    DataScience: ['Machine Learning', 'Data Analysis', 'Pandas', 'TensorFlow', 'Scikit-learn', 'NumPy', 'R', 'Tableau', 'SQL'],
+    Tools: ['Git', 'Docker', 'Jenkins', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud', 'Jira', 'Trello'],
+    Communication: ['Public Speaking', 'Written Communication', 'Presentation Skills', 'Active Listening', 'Negotiation'],
+    Leadership: ['Team Leadership', 'Project Management', 'Decision Making', 'Strategic Planning', 'Mentoring'],
+    ProblemSolving: ['Critical Thinking', 'Analytical Skills', 'Troubleshooting', 'Research Skills'],
+    SoftSkills: ['Time Management', 'Adaptability', 'Emotional Intelligence', 'Conflict Resolution', 'Creativity']
+};
+        function loadStudentsList() {
+            const studentsList = document.getElementById('studentsList');
+            const studentsHTML = students.map(student => `
+                <div class="student-card">
+                    <h4>${student.name} (${student.rollNo})</h4>
+                    <p><strong>Email:</strong> ${student.email}</p>
+                    <p><strong>Phone:</strong> ${student.phone}</p>
+                    <p><strong>Skills:</strong> ${student.skills.length > 0 ? student.skills.map(s => s.name).join(', ') : 'Not specified'}</p>
+                    <p><strong>Projects:</strong> ${student.projects.length} projects</p>
+                    <p><strong>Registered Companies:</strong> ${student.registeredCompanies.length} registrations</p>
+                    <div class="job-actions">
+                        ${student.resume ?
+                            `<a href="${student.resume}" target="_blank" class="btn btn-small">View Resume</a>` :
+                            '<span style="color: #64748b; font-style: italic;">No resume uploaded</span>'
+                        }
+                        <button class="btn btn-small btn-secondary" onclick="sendEmailToIndividualStudent('${student.rollNo}')">Send Email</button>
+                    </div>
+                </div>
+            `).join('');
+            studentsList.innerHTML = studentsHTML;
         }
 
-        // Utility functions
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-IN', { 
-                year: 'numeric', 
-                month: 'short', 
-                day: 'numeric' 
-            });
-        }
-
-        // Close modal when clicking outside
+        // Event Listeners
         window.onclick = function(event) {
             const modals = document.querySelectorAll('.modal');
             modals.forEach(modal => {
@@ -1753,9 +2272,8 @@
                     clearModalInputs();
                 }
             });
-        }
+        };
 
-        // Keyboard shortcuts
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const openModal = document.querySelector('.modal[style*="display: block"]');
@@ -1766,45 +2284,18 @@
             }
         });
 
-        // Initialize the application
         document.addEventListener('DOMContentLoaded', function() {
             updateStatistics();
-            
-            // Set minimum date for job posting
             const today = new Date().toISOString().split('T')[0];
-            const startDateInput = document.getElementById('jobStartDate');
-            const endDateInput = document.getElementById('jobEndDate');
-            
+            const startDateInput = document.getElementById('companyStartDate');
+            const endDateInput = document.getElementById('companyEndDate');
             if (startDateInput) startDateInput.min = today;
             if (endDateInput) endDateInput.min = today;
-            
-            // Update end date minimum when start date changes
             if (startDateInput) {
                 startDateInput.addEventListener('change', function() {
                     endDateInput.min = this.value;
                 });
             }
-        });
-
-        // Auto-save functionality for student profile
-        let autoSaveTimeout;
-        function autoSaveProfile() {
-            clearTimeout(autoSaveTimeout);
-            autoSaveTimeout = setTimeout(() => {
-                if (currentUser && currentUser.type === 'student') {
-                    updateSkillsDisplay();
-                }
-            }, 2000);
-        }
-
-        // Add event listeners for auto-save
-        document.addEventListener('DOMContentLoaded', function() {
-            const profileInputs = document.querySelectorAll('#student-profile input, #student-profile textarea');
-            profileInputs.forEach(input => {
-                if (input.id === 'profileSkills') {
-                    input.addEventListener('input', autoSaveProfile);
-                }
-            });
         });
     </script>
 </body>
